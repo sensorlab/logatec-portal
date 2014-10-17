@@ -22,7 +22,7 @@ Different sensor node clusters contain different combinations of the following e
 
 Additionally, a small number of software-defined radio nodes using the Ettus Reseach USRP N200 can be used in the test bed as needed. A Rohde & Schwarz SMBV100A vector signal generator and a FSV signal analyzer are available for on-site measurements.
 
-See [hardware](hardware) page for more details on testbed hardware.
+See [hardware](hardware.html) page for more details on testbed hardware.
 
 ## Locations
 
@@ -54,7 +54,9 @@ Nodes at JSI campus are running Contiki operating system with a dual, composable
 
 ## Software
 
-### 
+##
+
+See [software](software.html) page for more details on testbed software.
 
 ## Getting started
 
