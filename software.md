@@ -1,3 +1,5 @@
+<meta charset="utf-8">
+
 [TOC]
 
 # Software components
@@ -57,34 +59,11 @@ The portal can be accessed from <a href="http://www.log-a-tec.eu/">www.log-a-tec
 
 ## Testbed access using 6LoWPAN
 
-One of the main demands for LOG-aTEC from external experimenterd was related to the improvement of the low speed of the wireless management network through which the testbed is accessed and controlled. In order to take this into account for the new generation of the testbed that uses the same hardware for completely different embedded software, we first identified the use cases that need to be accommodated by testbeds in general and designed, implemented and performed an initial evaluation of the testbed. The full work is reported in a joint conference paper [51] with open access external experimenters from a Slovenian SME Xlab, who contributed part of the reported solution and was particularly interested in the evaluation of different (re)programming and (re)configuration approaches. 
-1 Use cases and required functionality*
-We identify two generic use cases for testbeds consisting of constrained devices such as sensor nodes: the monitoring use case and the experimentation use case. the monitoring use case refers to sensor based testbeds that enable monitoring of some phenomena such as energy consumption, humidity, temperature, motion, sound, gases, etc. These kinds of testbeds are typically used by researchers to automatically acquire some data about the phenomena under study. Examples of such testbeds are SmartSantander and CitySense. The experimentation use case refers to sensor based testbeds that support the development of new communication and networking technology by enabling experimentation with new algorithms and protocols. Motelab, TWIST and LOG-a-TEC are examples of such testbeds.
-In spite of this division in two major groups, from the point of view of the wireless management network, these testbeds have a set of common functionalities.
-1 Need for software upgrades*
-From the perspective of software upgrades, we identify three types of required updates: OS/firmware upgrades, driver updates and application updates. OS/firmware upgrades are expected to occur when new versions of these software are released or when a major flaw is discovered and needs immediate fixing. The frequency of these upgrades is expected to be of 3-4 per year at most for both use cases. From the perspective of the size of the code to be transfered over the air to the nodes of the testbed, these upgrades tend to be large.
-The driver updates are also expected to be required at most few times per year for the monitoring setupsand for most instances of the experimentation setups. However, for experimental setups that involve MAC layer experiments, the need for upgrades might be more frequent. In many cases, these upgrades can be achieved using dynamic linking, thus avoiding the need for realizing an OS/firmware upgrade. In such cases, the file sent to the nodes of the testbed is relatively small compared to the full OS/firmware image.
-The expected application updates vary a lot across testbeds. The more flexible and generic the testbed is, the higher the number of expected application updates. These updates are best performed using dynamic linking and in most cases their expected size is relatively small. Performing a full OS/firmware upload for each application tends to be uneconomical.
-2 Need for data collection*
-Testbeds used as the monitoring setups require sensor measurement data collection while the ones used as the experimentation setups require the collection of the experimental results. Here we distinguish non-time critical data collection and time-critical data collection. When the data collection is time critical, the measured phenomenon or the experimental results have to be sent to the consumer within a small predefined time period from when they were produced and can also be referred to as (near-)real time data collection. This kind of data collection is encountered in sense-act type of systems that base their actuating decision on the sensed value. When the data collection is not time critical, it is typically saved locally on the node and transmitted all at once in batch mode. This collection mechanism is found in scenarios where the data is being post processed.
-We also distinguish reliable and unreliable data collection. In the first case, the loss of the measurement data is undesired while is the second case loss of data is not considered a major issue.
-3 Need for remote reconfiguration and control*
-Remote reconfiguration is a desired feature for both setups. For the monitoring setup, the user of the testbed might want to change the sampling rate of the sensor or might want to change the size of the buffer that stores the measurements. For the experimentation setup, the user might vary several parameters such as the frequency at which packets are sent, the number of retransmissions, transmitting power, receive channel filter bandwidth, carrier sense indicator etc. In some cases, using remote reconfiguration, the entire experiment can be remotely reconfigured. For instance, using run-time reconfiguration, the entire protocol stack can be reconfigured without flashing the node. Using a fully modular implementation such as CRime, an experiment that uses a gossip based algorithm for sending data can be easily reconfigured to use another type of algorithm.
-Remote control is a desired feature for sense-act scenarios that can also appear in both setups. For instance, in a monitoring setup, a light can be dimmed in response to the sensed values of luminance and presence. In an experimentation setup, a node can be controlled to start a transmission after another node sensed a free channel.
-2 Design, implementation and initial evaluation of the LOG-a-TEC cognitive networking testbed*
-1 Design choices *
-When building a new testbed from scratch, one is faced with selecting a desired hardware platform and a supported operating system. Heterogeneous testbeds may chose several different such platforms. The use cases and functionality, as well as the considerations with respect to reprogramming, reconfiguration, speed and reliability should be taken into account when selecting the hardware and OS. For instance, with some OSes it will be impossible to support dynamic linking and/or run time reconfiguration. The resulting combination of hardware/OS selected needs to be evaluated and optimized similar to the example provided in this section.
-When upgrading an already existing testbed, there may be already existing constraints on the choice of hardware and software. For instance, the starting points for the extension of the already existing LOG-a-TEC testbed was the VESNA sensor node and the ProtoStack tool. The VESNA platform is already being used in the existing testbed for spectrum sensing and cognitive radio experimentation and is the supporting block of most of our research activities. The ProtoStack tool has been developed to support modular protocol development that would enable easy experimentation with multi-hop routing algorithms using also learned link characteristic for the routing decision - thus enabling cognitive networking experimentation. As ProtoStack relies on the Contiki OS, the extension has to use this operating system.
-Starting with these constraints, answers for the following three main issues have to be found:
-How to enable two wireless - experimental and management - networks running in parallel on VESNA with Contiki (subsection 2)?
-How should experiment reconfiguration, control and software upgrade be performed (subsection 3)?
-Which transceiver should be used for the management network in order to achieve the best possible throughput (subsection 1)?
-
 ### Dual-stack Contiki on VESNA
 
 VESNA sensor nodes deployed in the 6LowPAN testbed have two independent transcievers: Texas Instruments CC1101 (868 MHz) and Atmel AT86RF230 (2.4 GHz). Hardware supports the use of both transceivers at the same time. So, while the hardware set-up already supports dual stack (one for management and one for experimentation), a solution for a dual-stack OS had to be developed.
 
-Contiki OS includes two protocol stacks, one based on uIPv6 that can be configured as 6LowPAN/uIPv6/UDP/CoAP and the second protocol stack which is custom and is referred to as Rime. 6LowPAN assumes a IEEE802.15.4 compatible transceiver and since only the Atmel transceivers comply to this, the most natural decision was to consider the Atmel transceivers for the management network and the TI transceivers for the experimental network. However, in the normal release of Contiki OS the two stacks cannot run in parallel but only one at a time.  This required extension/adaptation of the Contiki OS to support dual stack operation. The original Contiki OS code uses compile-time defined network layers. Some layers are used by both Rime and uIP at the same time (see framer_nullmac in the figure below), so we modified the networking code to explicitly pass information about which network stack the current packet belongs to. It should be noted that in a single stack Contiki, Rime uses 2 bytes for node network address, while uIP requires 8 bytes. To keep Rime packet small, thus maintaining the low power consumption of the Rime stack, we modified Contiki to permit different network address size for Rime and uIPv6 packets respectively.
+Contiki OS includes two protocol stacks, one based on uIPv6 that can be configured as 6LowPAN/uIPv6/UDP/CoAP and the second protocol stack which is custom and is referred to as Rime. 6LowPAN assumes a IEEE802.15.4 compatible transceiver and since only the Atmel transceivers comply to this, the most natural decision was to consider the Atmel transceivers for the management network and the Texas Instruments transceivers for the experimental network. However, in the normal release of Contiki OS the two stacks cannot run in parallel but only one at a time. This required extension/adaptation of the Contiki OS to support dual stack operation. The original Contiki OS code uses compile-time defined network layers. Some layers are used by both Rime and uIP at the same time (see framer\_nullmac in the figure below), so we modified the networking code to explicitly pass information about which network stack the current packet belongs to. It should be noted that in a single stack Contiki, Rime uses 2 bytes for node network address, while uIP requires 8 bytes. To keep Rime packet small, thus maintaining the low power consumption of the Rime stack, we modified Contiki to permit different network address size for Rime and uIPv6 packets respectively.
 
 Finally, we integrated the new, Composable Rime network stack that enables reconfigurable protocol stacks in the Contiki OS and configured the operating system to support the 6LowPAN based management network and the CRime based experimental network in parallel as depicted in the figure below.
 
@@ -92,38 +71,115 @@ Finally, we integrated the new, Composable Rime network stack that enables recon
 
 ### Software upgrades, reconfiguration and control
 
-Software upgrades require a bootloader running on the VESNA platform and a large image to be sent to the node over the management network. In the case under investigation, the full image of the monolithic dual stack is in the range of 150 kB as shown in Table . This image corresponds to a particular application (i.e. single experiment) and needs to be changed should another application be needed (i.e. flash the node).
-Table  Transfer size.
+Software upgrades require a bootloader running on the VESNA platform and a large image to be sent to the node over the management network. In the case under investigation, the full image of the monolithic dual stack is in the range of 150 kB as shown in the table below. This image corresponds to a particular application (i.e. single experiment) and needs to be changed should another application be needed (i.e. flash the node).
+
+<img src="img/transfersizes.png">
 
 In order to support minor updates of drivers and applications, we used dynamic loading through the Contiki ELF (Executable and Linkable Format) loader module. Our main interest was to enable dynamically reprogrammable network stacks. In other words, we investigated the possibility of transferring new stack compositions, each representing a new experiment. This requires splitting the application into two parts.
+
 The first part, called core, is responsible for loading the minimal Contiki OS with added ELF loader functionality. This part of the node firmware is not changed during reprogramming. It is responsible for downloading the ELF application through the management network and to dynamically link it with the core OS.
+
 To implement it, we had to include the base Contiki image with uIPv6, TCP/UDP and CoAP, also support for:
-SD card driver and Contiki Coffee FS. 
-Utility application to receive ELF file from network, and write it to a file.
-ELF loader (generic and CPU architecture specific part) to do actual ELF file relocation.
-Symbol table stores addresses and names of all core OS functions, which might be called by the ELF application.
-The second part is the ELF application. The application calls functions exported by the core OS, and is compiled as a standard ELF file. When splitting the previous monolithic dual stack image into core OS (with uIP management network) and ELF application (with CRime experimental network) we have the option to leave some code parts, used only by CRime, in the core OS. In particular, we decided to leave the TI CC radio driver in the core OS. As that particular piece of code is already stable, we expect it will not require frequent updates. This resulted in about 50% smaller ELF application file.
-The automatically generated symbol table contains the address and the name of each function in the core. Many of them are not even supposed to be used by the application (low level hardware initialization, static functions, ARM CMSIS library functions). Thus we minimized the core OS image size by excluding unneeded function entries from the symbol table.
-We looked at the size of the file to be transferred to the nodes over the air for the very simple hello-world application and for a more complex trickle stack. The size of the hello-world ELF file is 1.7 kB while the size for the trickle ELF file is 11 kB as listed in Table . The trickle ELF application is small compared to the full OS image, but it still does have a significant overhead due to the ELF file metadata.
-This observation led us to look at run-time reconfiguration options, where all the CRime modules are loaded on the node using a monolithic system image and then a stack composition message, which describes and configures the experiment, is sent. We used an un-optimized JSON format for the configuration message whose size can vary between 1.6 kB for a simple experiment to 8 kB for a more complex experiment as shown in Table . The code required for parsing the JSON and generating the experiment added additional 7.5 kB to the size of the system image.
-1 Transceiver selection*
-As explained in Sect. Error: Reference source not found the selected hardware platform supports operation of the management and experimentation networks in two ISM bands, depending on the choice of transceivers to be soldered on the SNE-ISMTV boards used on VESNA, and this subsection deals with the selection of the most suitable transceiver for the management network. The candidate transceivers supporting the management network are two Atmel transceivers: AT86RF230 (2.4 GHz) and AT86RF212 (868 MHz). The first step in evaluating these transceivers was to determine the three operating regions, effective, clear and transitional, referring to regions with the packet success rate above 90%, below 10% and with highly varying value between these boundaries, respectively [41].
-The experiment was carried out on a 55 meter corridor of a long building where several WiFi access points are also active. Figure  plots the three regions empirically determined in our experiments for the AT86RF230 (2.4 GHz) transceiver. The tests show that the effective region goes up to 22 m in the line of sight conditions (no obstacles on the corridor). Additionally, we performed experiments to understand how the throughput is affected by the packet rate as shown in Figure . The results show that rates exceeding 70 packets per second lead to packet losses. 
-The plots for the AT86RF212 (868 MHz) transceiver are similar, with the effective region ending at 28 m and the optimal application rate being also at 70 packets per second..
 
-Figure  Reception success rate as a function of distance for the AR86RF230 (2.4 GHz) transceiver.
-
-Figure  Reception success rate as a function of application packet rate for the AT86RF230 (2.4 GHz) transceiver.
-After determining the three regions for the two transceivers under consideration, we looked at the application transfer rates and various settings that influence these. For instance, by using the header compression enabled by 6LoWPAN, the application payload can be increased thus maximizing the data rate. The CoAP client was mimicking reprogramming functionality by sending large files for reprogramming the nodes running CoAP server and data collection functionality by requesting (randomly generated) data from the nodes (see Figure ). The CoAP clients are located on a wired IPv4/IPv6 network, then use a gateway towards the border router which has a wireless management interface for the nodes. The links between the nodes and the border router were within the effective regions, hence reliable.
+ * SD card driver and Contiki Coffee FS.
+ * Utility application to receive ELF file from network, and write it to a file.
+ * ELF loader (generic and CPU architecture specific part) to do actual ELF file relocation.
+ * Symbol table stores addresses and names of all core OS functions, which might be called by the ELF application.
  
-Figure  Experimental set-up for the initial evaluation.
-We performed two different types of experiments, upload and download for two different sets of radio transceivers Atmel AT86RF212 (Table ) and AT86RF230 (Table ). Each type of the experiment had five different steps and with each step we were increasing the size of the data (i.e. file) to be transmitted between 128 and 256000 bytes. To get more reliable results we repeated each step 10 times and then we calculated the average throughput value. With respect to the upload and download we performed 100 measurements per radio transceiver. From the results in Table  and Table , it can be seen that AT86RF230 is achieving higher data throughput and the links are more stable. 
-In our evaluation we only considered packets that contain payload data, avoiding acknowledgments messages that are sent for each packet and that are not relevant for the application data rate. We decided to use HC01 and HC02 compression for 6LoWPAN because if the CoAP client is accessing the testbed from a different network subnet, the IPv6 address will not be fully compressed in any case. Packet fragmentation was disabled. MAC header compression was not used, because it is supported only by the AT86RF212 MAC. As a note, there are several configurations and tunings that can be performed with such an evaluation. Configurations in the Contiki OS, the used drivers and the point from which the client is accessing the node influence the final performance of the wireless management network. 
-Table  Evaluation of AT86RF212.
+The second part is the ELF application. The application calls functions exported by the core OS, and is compiled as a standard ELF file. When splitting the previous monolithic dual stack image into core OS (with uIP management network) and ELF application (with CRime experimental network) we have the option to leave some code parts, used only by CRime, in the core OS. In particular, we decided to leave the TI CC radio driver in the core OS. As that particular piece of code is already stable, we expect it will not require frequent updates. This resulted in about 50% smaller ELF application file.
 
-Table  Evaluation of AT86RF230.
+The automatically generated symbol table contains the address and the name of each function in the core. Many of them are not even supposed to be used by the application (low level hardware initialization, static functions, ARM CMSIS library functions). Thus we minimized the core OS image size by excluding unneeded function entries from the symbol table.
 
-Tables Table  and Table  are summarizing results where 64 bytes of application payload has been used. It can be seen that transferring 128000 bytes (a bit less than a full system image from Table ), 68 seconds are needed when using AT86RF230 and 177 seconds when using AT86RF212. For the dynamic loading of a simple application or its run-time reconfiguration using a non-optimal JSON format, less than a second is needed with AT86RF230 and under 2 seconds with AT86RF212. Our initial experiments showed that the AT86RF230 transceiver is more suitable if speed is the only selection criterion. Further tests and evaluations with respect to other criteria are underway.
+We looked at the size of the file to be transferred to the nodes over the air for the very simple hello-world application and for a more complex trickle stack. The size of the hello-world ELF file is 1.7 kB while the size for the trickle ELF file is 11 kB as listed in Table . The trickle ELF application is small compared to the full OS image, but it still does have a significant overhead due to the ELF file metadata.
+
+This observation led us to look at run-time reconfiguration options, where all the CRime modules are loaded on the node using a monolithic system image and then a stack composition message, which describes and configures the experiment, is sent. We used an un-optimized JSON format for the configuration message whose size can vary between 1.6 kB for a simple experiment to 8 kB for a more complex experiment as shown in Table . The code required for parsing the JSON and generating the experiment added additional 7.5 kB to the size of the system image.
+
+### References
+
+ * Cinkelj, Justin, et al. "Design Trade-offs for the Wireless Management Networks of Constraint Device Testbeds", ISWCS 2014, Barcelona, Spain.
+
+## Modular protocol architecture using ProtoStack and CRime
+
+[ProtoStack](https://github.com/sensorlab/ProtoStack) is a reference implementation of a framework that allows composing communication services in a dynamic way. The framework is based on a fine-grained modular protocol stack architecture. The reference implementation of the modular protocol stack architecture is [Composable Rime (CRime)](https://github.com/sensorlab/CRime).
+
+### Components of the framework
+
+The overall framework has four functional components: the physical testbed, the module library, the declarative language, and the workbench as depicted in the figure below.
+
+<img alt="ProtoStack components" src="img/protostack-components.png" width=500>
+
+#### The physical testbed
+
+By physical testbed we refer to a set of machines on which the stack built by the composition of services is deployed and tested. The machines need to support the module library and any additional software that is planned to be deployed. When implementing the framework, the type of machines will determine the selection of the module library, or vice versa. To better represent the likely future deployments, it is desirable that the supported machines of the physical testbeds are as diverse as possible (i.e. heterogeneous). This implies that the module library should be as portable as possible. Further, depending on the location and configuration of the testbed, procedures for resetting the machines in case of fatal errors may be challenging, therefore it is desirable that the deployed binary image is fault proof.
+
+#### The module library
+
+The module library consists of the source code of the modules used for composing communication services. Besides the code for the modules it also contains additional code necessary for compiling and linking the binary image. Depending on the programming language, the modules are implemented as classes or as a set of functions, each in its own file. The modules provide services to each other through interfaces. One module may correspond to a basic service such as routing (e.g. shortest path routing) or may correspond to composite services such as an entire protocol (e.g. IP).
+
+#### The declarative language
+
+The declarative language is used to instantiate and configure modules from the module library. Subsequently, tools that are able to perform validity checking, error detection, compilation of binary images and their deployment in the physical testbed can be used. The declarative language is a natural intermediate level of abstraction between a user interface such as the workbench and the program code. There is a correspondence between elements of the workbench and the elements of the language. A translation tool is employed to translate from the workbench's elements to the declarative language. In some cases, the user may want to bypass the user interface and directly use the language for describing and configuring the modules in a stack prior to the experiment. As a consequence, the language typically also needs to be human readable, possibly easy to learn and should use intuitive code words.
+
+#### The workbench
+
+The workbench is thought of as a control panel which allows the experimenter to configure, start, run, retrieve and visualize the results of an experiment. Therefore the workbench should first and foremost contain functionality that would allow the experimenter to intuitively compose a stack and provide initialization parameters. This is typically achieved by having a region where available modules are listed in graphical and/or textual form (e.g. shortest path routing, transmission control protocol). The modules can then be dragged to a workspace, connected and specific parameters initialized (e.g. time to live, maximum number of retransmissions). Some error checking mechanism should be implemented to ensure that incompatible elements are not wired together and that parameters are inside the permitted ranges. Additionally, the workbench can contain an area where the experiment can be visualized while running (e.g. number of dropped packets, delay) and a summary of the completed experiment can be provided (e.g. total time per operation).
+
+### Requirements for the framework
+
+The framework for dynamic composition of services has to support design and experimentation of new communication services and modular protocol stacks. In order to achieve this, we identify a set of requirements which help fulfill this objective:
+
+* Modularity – the communication services have to have a modular design and implementation to allow composeability of more complex services which can then achieve end to end communication.
+* Flexibility – the components of the workbench should be designed and implemented in a way that allows interacting with the resulting tool at different levels of abstractions (e.g. at the module library level, at the workbench level). The components should also be easy to extend and upgrade.
+* Easy programming – users with various levels of programming skills should find it easy to use the tools appropriate to their level of experience resulting from the implementation of the framework.
+* Reproducibility of experiments – the framework should support re-running and reproducing experiments in an easy way for instance by saving and reloading an experiment description.
+* Remote experimentation – remote users should be able to define and perform experiments and download the result. This can be most easily achieved through a web portal.
+
+### The ProtoStack tool
+
+In this section we briefly introduce a reference implementation of the framework for the dynamic composition of services called ProtoStack. We discuss the implementation of the framework and we identify the communities which may find such a tool useful.
+
+The implementation of ProtoStack was triggered by a wireless sensor network testbed and is used for experimentation with cognitive radio and cognitive networking in the framework of the CREW project. As such, ProtoStack is designed in a way to ease research and experimentation with communication networks, particularly with cognitive networks. The system was designed so that
+
+i) an advanced user such as the component developer needs to focus on developing the component and make it work with [Contiki OS](http://www.contiki-os.org/) and
+
+ii) a novice user needs only to focus on composing services in a stack using the workbench.
+
+The physical testbed is based on VESNA sensor network platform to which the Contiki OS has been ported, partly due to the adaptive Rime architecture which comes with it. This physical testbed posed constraints that determined the selection of Composeable Rime (CRime) as the module library.
+
+The CRime module library in the reference implementation is a purpose-built set of protocols influenced by and based on the Rime architecture. The declarative language we selected for ProtoStack is based on the [Resource Description Framework (RDF)](http://www.w3.org/TR/PR-rdf-syntax/), a standard semantic web language. The implementation uses the [Turtle](http://www.w3.org/TeamSubmission/turtle/) syntax together with existing standardized vocabulary and a custom ontology. The workbench is tightly integrated with the language and is implemented using [WireIt](http://neyric.github.com/wireit/), an open source javascript library which enables the creation of full web graph editors.
+
+
+<img alt="ProtoStack" src="img/protostack-steps.png" width=500>
+
+*ProtoStack: an implementation of the framework for composing communication services. The implementation addresses the sensor networks domain.*
+
+In figure above we illustrate the steps for dynamic composition of services using the ProtoStack tool. The component developer develops a module, manually tests it and makes sure everything works as intended, and, at the end he/she needs to write few lines of Turtle statements (i.e. triples) which specify basic characteristics of the new module (i.e. the name of the module, how many and what type of primitives it implements, etc.). Once this is done, ProtoStack parses the Turtle triples from the new module and stores them in the triple store (arrow 1 in figure). When the user starts using the system, the workbench will be automatically populated with modules based on the statements stored in the triple store and rendered (arrow 2 in figure).
+
+The user will then compose the desired stack, insert the required parameters and press a button to run the stack on the physical testbed (arrow 3 in figure). When such a command is received, the system first checks for consistency by making sure the composition of modules is valid and that the input parameters are in a valid range. If all is fine, some C code is automatically generated based on what the user composed (arrow 4 in figure). This code configures the CRime stack. Finally, the source code is compiled into a binary form representing an image that is uploaded on VESNA (arrow 5 in Figure).
+
+The experiment description resulting from the stack composed and configured by the user is saved and can be re-used at a later time for re-running the same experiment. All this can be done remotely thanks to the web based workbench.
+
+### CRime abstractions
+
+CRime is a new architecture designed to support the composition of communication services which is inspired by and built upon the Rime architecture. CRime introduces three abstractions the amodule, the pipe and the stack.
+
+The **amodule** (short from abstract module) is a generic building block of the CRime stack. Behind each instance of an amodule hides a communication service such as broadcast or multihop. The communication service is an implementation of a network function such as protocol or algorithm and contains only the execution logic of that function. Several amodule instances can be arranged in a pipeline to form a communication stack.
+
+The **pipe** is a vertical structure which can be accessed by any of the modules in a composed stack. The pipe contains only data structures corresponding to parameters that are used by the stack. Pipes are uniquely identified by the channel number they are assigned to, therefore a single channel can only have one associated pipe at a time. This implementation, while not the most efficient approach from a software engineer’s perspective, nor the most resource efficient in terms of memory, instantiates the concept of vertical layer and is the first building block in the implementation of the knowledge plane required for experimentation with cognitive networks. The approach is also a compromise between memory footprint and the complexity required by the autogenerated C code based on user input.
+
+The **stack** is a structure which contains a meaningful sequence of amodules and a pipe. It behaves as a container for these elements and enables the composition of more complex communication services which use more than a single channel at a time. Using the stack abstraction, an independent communication stack can reside on each channel. These stacks merge at the application layer or below it. Figure below depicts the three abstractions in an example of a 1 channel - 1 stack and an example of a 3 channel – 3 stack communication system.
+
+(a) <img src="img/protostack-examplea.png" height=150>
+
+(b) <img src="img/protostack-exampleb.png" height=150>
+
+*Example of CRime stacks: (a) 1 channel – 1 stack example and (b) 3 channel – 3 stack.*
+
+### References
+
+ * Fortuna, C., “Dynamic Composition of Communication Services”. Ljubljana, Slovenia: Jozef Stefan International Postgraduate School, 2013.
+ * Dunkels, A., Osterlind, F. and He, Z., “An Adaptive Communication Architecture for Wireless Sensor Networks”, in Proceedings of the ACM Conference on Embedded Networked Sensor Systems, 335–349, 2007, Sydney, Australia.
+ * Fortuna, C. and Mohorcic, M., “Dynamic composition of services for end-to-end information transport”, IEEE Wireless Communications Magazine, 2009, Vol. 16.
 
 ## GRASS-RaPlaT for experiment planning and visualization of measurements
 
