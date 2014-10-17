@@ -50,7 +50,7 @@ Nodes in the cluster are running the vesna-drivers firmware and use a dedicated,
 
 This cluster is currently used for experiments with packet-based transmissions and dynamic network stack composition in wireless sensor networks. All nodes in the cluster contain one CC1101 and one AT86RF231 radio.
 
-Nodes at JSI campus are running Contiki operating system with a dual, composable networking stack. A 6lowpan network using the AT86RF231 radio is used to control and reprogram the nodes. Each node is directly accessible from the Internet using IPv6.
+Nodes at JSI campus are running Contiki operating system with a dual, composable networking stack. A 6LoWPAN network using the AT86RF231 radio is used to control and reprogram the nodes. Each node is directly accessible from the Internet using IPv6.
 
 ## Software
 
@@ -59,12 +59,12 @@ The following is a list of the major software components of the LOG-a-TEC testbe
 ### Node firmware
 
  * *vesna-drivers* is a custom developed C library for developing node firmware images. It supports experiment control and data retrieval over an application protocol similar to HTTP (ALH). Typical application developed with vesna-drivers supports signal generation and energy detection.
- * [Contiki OS](http://www.contiki-os.org/) is an open source embedded operating system with cooperative multi-tasking. In LOG-a-TEC testbeds it has been extended to support two networking stacks, which enables experimentation with packet-based transmissions in wireless sensor networks.
+ * [Contiki OS](http://www.contiki-os.org/) is an open source embedded operating system with cooperative multi-tasking. In LOG-a-TEC testbeds it has been extended to support two networking stacks in parallel and a composeable RIME stack. It is typically used for experimentation with packet-based transmissions in wireless sensor networks.
  * [vesna-spectrum-sensor](https://github.com/sensorlab/vesna-spectrum-sensor) is an open source spectrum sensing application for spectrum sensing using VESNA sensor nodes. It is typically used when measurements with a mobile sensor node are performed in the testbed. It uses a wired RS-232 connection with a PC to report measurements.
 
 ### Experiment support
 
- * A [LOG-a-TEC web portal](https://crn.log-a-tec.eu/) provides an overview the testbed, its current state and allows for manual interaction with sensor nodes using a REST API requests. It also provides an graphical interface to the radio planning tools.
+ * A [LOG-a-TEC web portal](https://crn.log-a-tec.eu/) provides an overview the testbed, its current state and allows for manual interaction with sensor nodes using a REST API requests. It also provides a graphical interface to the radio planning tools.
  * [vesna-alh-tools](https://github.com/sensorlab/vesna-alh-tools) is a library and a collection of tools that allow for interaction with the testbed and experiment control from the Python language. [vesna-alh-js](https://github.com/sensorlab/vesna-alh-js) is a similar, although less developed library, using Javascript.
  * [ProtoStack](https://github.com/sensorlab/ProtoStack) is a graphical tool for network stack development. It can be used to experiment with dynamic composition of communication services in the Contiki OS.
  * [GRASS-RaPlaT](http://www-e6.ijs.si/RaPlaT/GRASS-RaPlaT_main_page.htm) is an open-source radio planning tool. It contains a number of channel models that can be used to calculate radio coverage of a single node or a whole network. Integration with the LOG-a-TEC testbed provides raster maps of the area surrounding the testbed and can be used, for example, to predict received signal strengths for radio links in an experiment.
