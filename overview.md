@@ -2,15 +2,15 @@
 
 # Overview
 
-The Cognitive Radio part of the LOG-a-TEC testbed consists of several clusters of permanently mounted VESNA sensor nodes that are dedicated to experimentation with spectrum sensing and radio communications within wireless sensor networks. Each sensor node in these clusters is equipped with multiple reconfigurable radio interfaces that can be used in various modes and frequency bands. A license from the local regulator allows for experimentation in TV whitespaces.
+The Cognitive Radio part of the LOG-a-TEC testbed consists of several clusters of permanently mounted VESNA sensor nodes that are dedicated to experimentation with spectrum sensing and radio communications within wireless sensor networks. Each sensor node in these clusters is equipped with multiple reconfigurable radio interfaces that can be used in various modes. A license from the local regulator allows for experimentation in TV whitespaces as well as frequency bands for unlicensed devices.
 
-Testbed is remotely accessible over the Internet and uses a dedicated, wireless management network to control individual sensor nodes in a cluster. Different approaches can be used to perform experiments, depending on the latency requirements and complexity of experimental scenarios: from reprogramming the nodes with native applications to high-level control using Python or graphical network stack composition. Radio propagation modeling tools can be used as well to plan the experiments.
+Testbed is remotely accessible over the Internet and uses a dedicated, wireless management network to control individual sensor nodes in a cluster. Different approaches can be used to perform experiments, depending on the latency requirements and complexity of experimental scenarios: from high-level control using Python or graphical network stack composition to reprogramming the nodes with native applications. Radio propagation modeling tools can be used as well to plan the experiments.
 
 In addition to permanently mounted nodes, several kinds of mobile nodes or instruments can be added to the testbed in special cases and after previous agreement.
 
 ## Hardware
 
-[VESNA](http://sensorlab.ijs.si/hardware.html) sensor node core (SNC) provides processing and storage at each sensor node. ARM Cortex M3 CPU at 64 MHz, 512 kB FlashROM, 64 kB RAM, 2 GB SD card for code and data storage.
+[VESNA](http://sensorlab.ijs.si/hardware.html) sensor node core (SNC) provides processing and storage at each sensor node. It contains an ARM Cortex M3 CPU at 64 MHz, 512 kB FlashROM, 64 kB RAM and an 2 GB SD card for code and data storage.
 
 Different sensor node clusters contain different combinations of the following embedded radio hardware:
 
@@ -54,7 +54,20 @@ Nodes at JSI campus are running Contiki operating system with a dual, composable
 
 ## Software
 
-##
+The following is a list of the major software components of the LOG-a-TEC testbed.
+
+### Node firmware
+
+ * *vesna-drivers* is a custom developed C library for developing node firmware images. It supports experiment control and data retrieval over an application protocol similar to HTTP (ALH). Typical application developed with vesna-drivers supports signal generation and energy detection.
+ * [Contiki OS](http://www.contiki-os.org/) is an open source embedded operating system with cooperative multi-tasking. In LOG-a-TEC testbeds it has been extended to support two networking stacks, which enables experimentation with packet-based transmissions in wireless sensor networks.
+ * [vesna-spectrum-sensor](https://github.com/sensorlab/vesna-spectrum-sensor) is an open source spectrum sensing application for spectrum sensing using VESNA sensor nodes. It is typically used when measurements with a mobile sensor node are performed in the testbed. It uses a wired RS-232 connection with a PC to report measurements.
+
+### Experiment support
+
+ * A [LOG-a-TEC web portal](https://crn.log-a-tec.eu/) provides an overview the testbed, its current state and allows for manual interaction with sensor nodes using a REST API requests. It also provides an graphical interface to the radio planning tools.
+ * [vesna-alh-tools](https://github.com/sensorlab/vesna-alh-tools) is a library and a collection of tools that allow for interaction with the testbed and experiment control from the Python language. [vesna-alh-js](https://github.com/sensorlab/vesna-alh-js) is a similar, although less developed library, using Javascript.
+ * [ProtoStack](https://github.com/sensorlab/ProtoStack) is a graphical tool for network stack development. It can be used to experiment with dynamic composition of communication services in the Contiki OS.
+ * [GRASS-RaPlaT](http://www-e6.ijs.si/RaPlaT/GRASS-RaPlaT_main_page.htm) is an open-source radio planning tool. It contains a number of channel models that can be used to calculate radio coverage of a single node or a whole network. Integration with the LOG-a-TEC testbed provides raster maps of the area surrounding the testbed and can be used, for example, to predict received signal strengths for radio links in an experiment.
 
 See [software](software.html) page for more details on testbed software.
 
@@ -95,3 +108,5 @@ Various experiments can be performed using the LOG-a-TEC infrastructure, for exa
 ### How to get access
 
 In order to access LOG-a-TEC you first need to get a user account. Please contact Matevz Vucnik, Tomaz Solc or Carolina Fortuna for this (firstname.lastname(at)ijs.si).
+
+Once you have a user account, [log in here](http://log-a-tec.eu/).
