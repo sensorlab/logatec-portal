@@ -8,6 +8,8 @@ Testbed is remotely accessible over the Internet and uses a dedicated, wireless 
 
 In addition to permanently mounted nodes, several kinds of mobile nodes or instruments can be added to the testbed in special cases and after previous agreement.
 
+<img alt="LOG-a-TEC testbed overview" src="img/vesnaHardwareOverview Y4.png" width=500>
+
 ## Hardware
 
 [VESNA](http://sensorlab.ijs.si/hardware.html) sensor node core (SNC) provides processing and storage at each sensor node. It contains an ARM Cortex M3 CPU at 64 MHz, 512 kB FlashROM, 64 kB RAM and an 2 GB SD card for code and data storage.
@@ -21,6 +23,8 @@ Different sensor node clusters contain different combinations of the following e
  * [AT86RF212](http://www.atmel.com/devices/at86rf212.aspx) and [AT86RF231](http://www.atmel.com/devices/at86rf231.aspx) transceivers, compatible with the IEEE 802.15.4 standard in the 2.4 GHz and 868 MHz bands.
 
 Additionally, a small number of software-defined radio nodes using the Ettus Reseach USRP N200 can be used in the test bed as needed. A Rohde & Schwarz SMBV100A vector signal generator and a FSV signal analyzer are available for on-site measurements.
+
+<img src="img/boxes.png" height=368><img src="img/poles.png" height=368>
 
 See [hardware](hardware.html) page for more details on testbed hardware.
 
@@ -43,6 +47,8 @@ These clusters are currently used for spectrum sensing experiments and radio env
  * nodes with SNE-ISMTV-UHF and AT86RF212 radios (sensing in UHF band, green on map).
 
 Nodes in the cluster are running the vesna-drivers firmware and use a dedicated, low-speed IEEE 802.15.4 management network (independent of the experimental radio hardware) for control and reprogramming. Each node is accessible from the Internet using a REST API and an application protocol similar to HTTP (ALH).
+
+<img alt="Map with sensor node locations in Logatec" src="img/Logatec-clusters.png" height=500><img alt="Sensor node mounted on a street light" src="img/UHFpole.png">
 
 ### JSI campus
 
