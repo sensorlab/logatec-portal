@@ -79,6 +79,8 @@ See [software](software.html) page for more details on testbed software.
 
 ## Getting started
 
+<img src="http://log-a-tec.eu/munin/localdomain/localhost.localdomain/count_nodes-week.png">
+
 ### Publications and tutorials
 
 The following material is available for LOG-a-TEC.
