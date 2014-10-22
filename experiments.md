@@ -22,7 +22,7 @@ A TV signal coverage was computed for the area covered by the testbed based on t
 
 To add dynamic content to the database, a process was implemented that continuously scanned the spectrum in a distributed fashion using the sensor nodes in the testbed. Once a PMSE transmission was detected, the geo-location database was instructed to add an additional exclusion region for white-space devices around the detected PMSE location. In this exclusion area, transmissions of secondary users on frequencies that would interfere with the PMSE transmission were temporarily forbidden.
 
-The system was validated by setting up a white space link from a base station to a mobile terminal that used the experimental database over the PAWS protocol to avoid interference with incumbent users. During a trial operation the spectrum use was monitored from a mobile measurement station using a spectrum analyzer. Several additional sensor nodes in the testbed, equipped with CC1101 transceivers, were used to transmit simulated wireless microphone transmissions to verify the operation of the sensing network. It was verified that the white space link sucessfully avoided both digital TV broadcasts as well as intermittent PMSE transmissions.
+The system was validated by setting up a white space link from a base station to a mobile terminal that used the experimental database over the PAWS protocol to avoid interference with incumbent users. During a trial operation the spectrum use was monitored from a mobile measurement station using a spectrum analyzer. Several additional sensor nodes in the testbed, equipped with CC1101 transceivers, were used to transmit simulated wireless microphone transmissions to verify the operation of the sensing network. It was verified that the white space link successfully avoided both digital TV broadcasts as well as intermittent PMSE transmissions.
 
 In summary, this experiment was able to showcase the technical feasibility of dynamic spectrum databases, i.e., the combination of a pre-computed white spaces map with real-time information from a distributed sensing network. At regulatory level, such experiments help administrations to recognize the value of spectrum monitoring as part of the progressive approach to managing spectrum more efficiently.
 
@@ -32,7 +32,7 @@ In summary, this experiment was able to showcase the technical feasibility of dy
 
  * [Interactive demo of the CREW-TV database](http://www.cmsf.eu/projects/crew-tv/)
 
-# Game-theoretical interferrence mitigation
+# Game-theoretical interference mitigation
 
 TBD
 
