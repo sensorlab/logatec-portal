@@ -79,6 +79,14 @@ The following is a list of the major software components of the LOG-a-TEC testbe
 
 See [software](software.html) page for more details on testbed software.
 
+## Past experiments
+
+ * CREW-TV: combining a static geo-location database with dynamic sensing data for avoiding interference with incumbent users in TV white spaces.
+ * Evaluating a game-theoretic approach to interference mitigation.
+ * Evaluating over-the-air reprogramming strategies.
+
+See [experiments](experiments.html) page for more details on past experiments performed on the testbed.
+
 ## Getting started
 
 <img src="http://log-a-tec.eu/munin/localdomain/localhost.localdomain/count_nodes-week.png">
@@ -103,7 +111,7 @@ The following material is available for LOG-a-TEC.
 
  * A demonstration of SNE-ISMTV hardware capabilities <a href="http://sensorlab.ijs.si/files/publications/Solc-SNE-ISMTV_VESNA_wireless_sensor_node_expansion_for_cognitive_radio_experiments_a.pdf">Tomaž Šolc: SNE-ISMTV: VESNA wireless sensor node expansion for cognitive radio experiments, The Tenth International Symposium on Wireless Communication Systems, Ilmenau, Germany, August 2013</a>.
 
-### Example use cases
+### Code examples
 
 Various experiments can be performed using the LOG-a-TEC infrastructure, for example:
 
@@ -112,8 +120,7 @@ Various experiments can be performed using the LOG-a-TEC infrastructure, for exa
  * Set up multiple nodes in the testbed to perform simultaneous tasks. ([Python source](https://github.com/sensorlab/vesna-alh-tools/blob/master/demos/crew-training/06-programmed-tasks.py))
  * UHF wireless microphone emulation. ([Python source](https://github.com/sensorlab/vesna-alh-tools/blob/master/demos/crew-y2-review/uhf-wireless-mic-simulation.py))
  * Simple cognitive terminal example. ([Python source](https://github.com/sensorlab/vesna-alh-tools/blob/master/demos/crew-y2-review/24ghz-cognitive-terminal.py))
- * Game theorectical wireless communication experiments. ([Python source](https://github.com/sensorlab/logatec-games))
- * Investigating different RF interference detection techniques, e.g. distributed vs. centralized detection.
+ * Game theoretical wireless communication experiments. ([Python source](https://github.com/sensorlab/logatec-games))
 
 ### How to get access
 
