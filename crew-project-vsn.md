@@ -26,7 +26,7 @@ Different sensor node clusters contain different combinations of the following e
 
 Additionally, a small number of software-defined radio nodes using the Ettus Reseach USRP N200 can be used in the test bed as needed. A Rohde & Schwarz SMBV100A vector signal generator and a FSV signal analyzer are available for on-site measurements.
 
-<img src="img/boxes.png" height=368><img src="img/poles.png" height=368>
+<img src="img/boxes.png" style="height:368px"><img src="img/poles.png" style="height:368px">
 
 See [hardware](hardware.html) page for more details on testbed hardware.
 
@@ -50,7 +50,7 @@ These clusters are currently used for spectrum sensing experiments and radio env
 
 Nodes in the cluster are running the vesna-drivers firmware and use a dedicated, low-speed IEEE 802.15.4 management network (independent of the experimental radio hardware) for control and reprogramming. Each node is accessible from the Internet using a REST API and an application protocol similar to HTTP (ALH).
 
-<img alt="Map with sensor node locations in Logatec" src="img/Logatec-clusters.png" height=500><img alt="Sensor node mounted on a street light" src="img/UHFpole.png">
+<img alt="Map with sensor node locations in Logatec" src="img/Logatec-clusters.png" style="height:500px"><img alt="Sensor node mounted on a street light" src="img/UHFpole.png">
 
 ### JSI campus
 

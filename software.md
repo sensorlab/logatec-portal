@@ -169,9 +169,9 @@ The **pipe** is a vertical structure which can be accessed by any of the modules
 
 The **stack** is a structure which contains a meaningful sequence of amodules and a pipe. It behaves as a container for these elements and enables the composition of more complex communication services which use more than a single channel at a time. Using the stack abstraction, an independent communication stack can reside on each channel. These stacks merge at the application layer or below it. Figure below depicts the three abstractions in an example of a 1 channel - 1 stack and an example of a 3 channel – 3 stack communication system.
 
-(a) <img src="img/protostack-examplea.png" height=150>
+(a) <img src="img/protostack-examplea.png" style="height:150px">
 
-(b) <img src="img/protostack-exampleb.png" height=150>
+(b) <img src="img/protostack-exampleb.png" style="height:150px">
 
 *Example of CRime stacks: (a) 1 channel – 1 stack example and (b) 3 channel – 3 stack.*
 
