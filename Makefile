@@ -5,7 +5,8 @@ PAGES =	overview.html \
 	crew-project-portal-logatec.html \
 	crew-project-portal-listoftestbeds.html \
 	crew-project-vsn.html \
-	crew-project-portal-log-tec-documentation.html
+	crew-project-portal-log-tec-documentation.html \
+	aqa.html
 
 all: $(PAGES)
 
