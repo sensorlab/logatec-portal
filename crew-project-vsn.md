@@ -28,7 +28,7 @@ Additionally, a small number of software-defined radio nodes using the Ettus Res
 
 <img src="img/boxes.png" style="height:368px"><img src="img/poles.png" style="height:368px">
 
-See [hardware](hardware.html) page for more details on testbed hardware.
+See [hardware](http://www.log-a-tec.eu/hardware.html) page for more details on testbed hardware.
 
 ## Locations
 
@@ -77,4 +77,4 @@ The following is a list of the major software components of the LOG-a-TEC testbe
  * [ProtoStack](https://github.com/sensorlab/ProtoStack) is a graphical tool for network stack development. It can be used to experiment with dynamic composition of communication services in the Contiki OS.
  * [GRASS-RaPlaT](http://www-e6.ijs.si/RaPlaT/GRASS-RaPlaT_main_page.htm) is an open-source radio planning tool. It contains a number of channel models that can be used to calculate radio coverage of a single node or a whole network. Integration with the LOG-a-TEC testbed provides raster maps of the area surrounding the testbed and can be used, for example, to predict received signal strengths for radio links in an experiment.
 
-See [software](software.html) page for more details on testbed software.
+See [software](http://www.log-a-tec.eu/software.html) page for more details on testbed software.
