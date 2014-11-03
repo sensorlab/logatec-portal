@@ -31,4 +31,4 @@ LOG-a-TEC is accessible via a web-interface. Experimenters can install pre-defin
  
 ## Getting started and user documentation
 
-[Access the complete documentation](http://www.log-a-tec.eu/cr.html)
+[Access the complete documentation](http://www.log-a-tec.eu/overview.html)
