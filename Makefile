@@ -1,7 +1,7 @@
-PAGES =	overview.html \
-	hardware.html \
-	software.html \
-	experiments.html \
+PAGES =	cr.html \
+	cr-hardware.html \
+	cr-software.html \
+	cr-experiments.html \
 	crew-project-portal-logatec.html \
 	crew-project-portal-listoftestbeds.html \
 	crew-project-vsn.html \
