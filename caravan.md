@@ -2,7 +2,10 @@
 
 # VESNA-based Intelligent Motorhome
 
-<img src="img/caravan.jpg" style="height:600px">
+<figure>
+    <img src="img/caravan.jpg" style="height:600px">
+    <figcaption>Caravan on a developers trip near Soča river.</figcaption>
+</figure>
 
 Jozef Stefan Institute and Adria Mobil, one of the leading European manufacturers of caravans and motorhomes, are collaboratively developing and implementing a prototype of an intelligent motorhome. The novel concept, which is referred to as *Adria moving lab*, focuses on hardware enablers and intelligent software that automates the motorhome and improves user experience. The goal is to build a smart motorhome that understands user needs, autonomously adapts to its users and environment, and consequently improves the comfort, safety and energy efficiency. The motorhome is equipped with multiple sensor-actutor units based on [VESNA](http://sensorlab.ijs.si/hardware.html) hardware platform  that connected into a wired bus network, gather the data and forwarding it to software for real-time data analysis based on the [QMiner](http://qminer.ijs.si/) data analytics platform. The latter is compiled for the BeagleBone platform and AI reasoning. The new integrated technology upgrades an existing service and enables smarter use of energy sources and more flexible control of heating, lighting, water supply etc.
 
