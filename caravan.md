@@ -4,7 +4,7 @@
 
 <figure>
     <img src="img/caravan.jpg" style="height:600px">
-    <figcaption>Photo: Klemen Bregar.</figcaption>
+    <figcaption>Photo: Klemen Bregar</figcaption>
 </figure>
 
 </newline>
@@ -12,12 +12,12 @@ Jozef Stefan Institute and Adria Mobil, one of the leading European manufacturer
 
 <figure>
     <img src="img/sta_vsn.jpg" style="height:600px">
-    <figcaption>Photo: STA.</figcaption>
+    <figcaption>Photo: STA</figcaption>
 </figure>
 
 One of the main goals of this set-up is to improve the overall energy efficiency of the vehicle, thus making it autonomous over significantly longer periods of time. Several VESNAs are placed to monitor the energy consumption of various devices and also on the main power lines. Consumption patterns are learnt and, by using also alternative data such as temperature and illuminance, the system is able to predict how long the batteries will last with the current batteries.
 
 <figure>
-    <img src="img/sta_vsn.jpg" style="height:600px">
     <img src="img/sta_tab.jpg" style="height:600px">
+    <figcaption>Photo: STA</figcaption>
 </figure>
