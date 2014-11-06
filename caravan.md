@@ -1,5 +1,18 @@
 <meta charset="utf-8">
 
+<head>
+<style>
+figure {
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 40px;
+    margin-right: 40px;
+    border: 1px solid;
+}
+</style>
+</head>
+
 # VESNA-based Intelligent Motorhome
 
 <figure>
