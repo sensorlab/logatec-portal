@@ -2,23 +2,9 @@
 
 # VESNA-based Intelligent Motorhome
 
-<head>
-<style>
-figure {
-    display: block;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    margin-left: 40px;
-    margin-right: 40px;
-    border: 1px solid;
-}
-</style>
-</head>
-
 <figure>
     <img src="img/caravan.jpg" style="height:600px">
-    <figcaption>Motorhome on developers trip near Soča river source.</figcaption>
-    <figcaption>Photo: Klemen Bregar</figcaption>
+    <figcaption>Motorhome on developers trip near Soča river source (Photo: Klemen Bregar).</figcaption>
 </figure>
 <br>
 
@@ -26,7 +12,7 @@ Jozef Stefan Institute and Adria Mobil, one of the leading European manufacturer
 
 <figure>
     <img src="img/sta_vsn.jpg" style="height:600px">
-    <figcaption>Photo: STA</figcaption>
+    <figcaption>One VESNA controller on a location (Photo: STA).</figcaption>
 </figure>
 <br>
 
@@ -34,6 +20,6 @@ One of the main goals of this set-up is to improve the overall energy efficiency
 
 <figure>
     <img src="img/sta_tab.jpg" style="height:600px">
-    <figcaption>Photo: STA</figcaption>
+    <figcaption>User interface on a tablet (Photo: STA).</figcaption>
 </figure>
 <br>
