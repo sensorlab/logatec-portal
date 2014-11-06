@@ -8,7 +8,8 @@ PAGES =	cr.html \
 	crew-project-portal-log-tec-documentation.html \
 	aqa.html \
 	caravan.html \
-	pv-portal.html
+	pv-portal.html \
+	caravan.html
 
 all: $(PAGES)
 
