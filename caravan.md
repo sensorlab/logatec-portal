@@ -4,7 +4,7 @@
 
 <figure>
     <img src="img/caravan.jpg" style="height:600px">
-    <figcaption style="color:blue;text-align:right">Caravan on a developers trip near Soča river.</figcaption>
+    <figcaption style="color:blue;text-align:center">Caravan on a developers trip near Soča river.</figcaption>
 </figure>
 
 </newline>
