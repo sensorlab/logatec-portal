@@ -4,7 +4,7 @@
 
 <figure>
     <img src="img/caravan.jpg" style="height:600px">
-    <figcaption>Photo: Klemen Bregar</figcaption>
+    <figcaption>Motorhome on developers trip near Soča river source.</figcaption>
     <figcaption>Photo: Klemen Bregar</figcaption>
 </figure>
 <br>
