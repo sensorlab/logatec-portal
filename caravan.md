@@ -1,5 +1,7 @@
 <meta charset="utf-8">
 
+# VESNA-based Intelligent Motorhome
+
 <head>
 <style>
 figure {
@@ -12,8 +14,6 @@ figure {
 }
 </style>
 </head>
-
-# VESNA-based Intelligent Motorhome
 
 <figure>
     <img src="img/caravan.jpg" style="height:600px">
