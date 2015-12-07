@@ -8,21 +8,20 @@
 
 ## Introduction
 
-This tutorial shows the basic steps required to develop, run and retrieve the results of simple cognitive radio experiments on the LOG-a-TEC testbed. Through several working examples it demonstrates how you can write Python scripts that communicate with the individual nodes in the testbed using the ALH protocol. It shows how these scripts can be run directly from the command line or from an OMF Experiment Controller. Where necessary, it will link to more in-depth LOG-a-TEC documentation and other resources on the web.
+This tutorial shows the basic steps required to develop, run and retrieve the results of simple cognitive radio experiments on the LOG-a-TEC testbed. Through several working examples it demonstrates how you can write Python scripts that communicate with the individual nodes in the testbed using the ALH protocol. It shows how these scripts can be run directly from the command line or from an OMF Experiment Controller. Where necessary, it provides links to more in-depth LOG-a-TEC documentation and other resources on the web.
 
-The tutorial assumes the following:
+The tutorial assumes that:
 
- * You are familiar with the basics of the Python programming language (see [The Python Tutorial](https://docs.python.org/2/tutorial/) for an introduction to Python),
- * you know the basic concepts of the LOG-a-TEC testbed (testbed clusters, coordinators, nodes and radios - see [LOG-a-TEC overview](http://log-a-tec.eu/overview.html)) and
+ * you know how to create and edit text files from the Linux command line,
+ * you are familiar with the basics of the Python programming language (otherwise see [The Python Tutorial](https://docs.python.org/2/tutorial/)),
+ * you know the basic concepts of the LOG-a-TEC testbed (testbed clusters, coordinators, nodes and radios - otherwise see [LOG-a-TEC overview](http://log-a-tec.eu/overview.html)) and
  * you have shell (SSH) access to the Sensor Cluster Controller (SCC), for example through the jFED Experimenter GUI.
 
 ## Writing a "Hello World" experiment
 
-In the first example we will establish a connection with the cluster coordinator and query its "hello" resource. The "hello" resource simply returns the version of the coordinator's firmware. This demonstrates the basic usage of the Python library to perform ALH GET requests.
+In the first example we will establish a connection with the cluster coordinator and query its `hello` resource. The `hello` resource simply returns the version of the coordinator's firmware. This demonstrates the basic usage of the Python library to perform ALH GET requests.
 
 Log into the Sensor Cluster Controller and save the following script into a file named `01-hello.py`:
-
-    # We start by importing some Python modules.
 
     # We use "logging" module from the standard library for writing out useful
     # debugging information.
@@ -51,7 +50,7 @@ Log into the Sensor Cluster Controller and save the following script into a file
 
 Further reading:
 
- * For a description of the underlying protol, see [testbed access using ALH protocol](http://log-a-tec.eu/software.html#testbed-access-using-alh-protocol).
+ * For a description of the underlying protocol, see [testbed access using ALH protocol](http://log-a-tec.eu/software.html#testbed-access-using-alh-protocol).
 
 ### Running with OMF
 
@@ -94,7 +93,7 @@ We also need a configuration file for the OMF Experiment Controller (EC). Save t
         rolling_file:
           log_dir: .
 
-Finally, we can run our experiment. Enter the following on the command line (if you reserved a cluster different from the `lgt-industrial` (LOG-a-TEC industrial zone), change the value of the `--cluster` option accordingly):
+Finally, we can run our experiment. Enter the following on the command line (if you reserved a cluster other than `lgt-industrial` (LOG-a-TEC industrial zone), change the value of the `--cluster` option accordingly):
 
     omf_ec -c config.yml 01-hello.rb -- --cluster lgt-industrial
 
@@ -142,7 +141,7 @@ Further reading:
 For simple experiments that only access the LOG-a-TEC testbed nodes from a
 Python script, running the script directly without OMF can be simpler.
 
-To run our `01-hello.py` script directly, enter the following on the command line (if you reserved a cluster different from the `lgt-industrial` (LOG-a-TEC industrial zone), change the value of the `CLUSTER_UID` variable):
+To run our `01-hello.py` script directly, enter the following on the command line (if you reserved a cluster other than `lgt-industrial` (LOG-a-TEC industrial zone), change the value of the `CLUSTER_UID` variable):
 
     CLUSTER_UID=lgt-industrial python 01-hello.py
 
