@@ -2,6 +2,9 @@ PAGES =	cr.html \
 	cr-hardware.html \
 	cr-software.html \
 	cr-experiments.html \
+	cr-etel-rspecs.html \
+	cr-etel-tutorial-part1.html \
+	cr-etel-tutorial-part2.html \
 	crew-project-portal-logatec.html \
 	crew-project-portal-listoftestbeds.html \
 	crew-project-vsn.html \
