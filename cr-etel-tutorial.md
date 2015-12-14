@@ -204,6 +204,10 @@ Similar to the OMF example, what you see on the screen includes both the output 
 
 ## Part 3: Controlling the testbed nodes from SCC
 
+*Note: reference documentation for classes and methods from the Python library is accessible from the SSC terminal using the `pydoc` tool. For example, to look up documentation for the `vesna.omf.ALH` class, use:*
+
+    pydoc vesna.omf.ALH
+
 ### Accessing individual nodes
 
 From the SCC we can only directly perform requests on the cluster coordinator. The coordinator itself does not have any resources for experimentation. Its only purpose is to forward our requests over the wireless management network to the testbed nodes using the ALH protocol.
