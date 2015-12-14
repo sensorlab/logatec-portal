@@ -1,5 +1,8 @@
 <!-- vim: linebreak filetype=markdown expandtab ts=4 sw=4
 -->
+
+[TOC]
+
 <meta charset="utf-8">
 
 # Fed4FIRE LOG-a-TEC Tutorial
@@ -7,7 +10,7 @@
 ## Part 1: Establish a SSH terminal session to a Sensor Cluster Controller (SCC) 
 
 ### Getting a Fed4FIRE account and certificate
-The [LOG-a-TEC](http://www.log-a-tec.eu/overview.html) testbed is a member of the [Fed4FIRE](http://www.fed4fire.eu/) federation of testbeds. To access it using the Fed4FIRE tools, the user needs a Fed4FIRE account and certificate. More information about how to obtain it can be found on the Fed4FIRE [tutorials](http://www.fed4fire.eu/tutorials/) page.
+The [LOG-a-TEC](cr.html) testbed is a member of the [Fed4FIRE](http://www.fed4fire.eu/) federation of testbeds. To access it using the Fed4FIRE tools, the user needs a Fed4FIRE account and certificate. More information about how to obtain it can be found on the Fed4FIRE [tutorials](http://www.fed4fire.eu/tutorials/) page.
  
 ### SFA client tools - jFed Tools
 The Fed4FIRE testbed federation is based on SFA (Slice-Based Federation Architecture). SFA-compatible client tools are needed to access and use the Fed4FIRE testbeds. The [jFed](http://jfed.iminds.be/) tools are a set of SFA-compatible tools supporting testbed users (experimenters) as well as developers. The tools are available with GUI (Graphical User Interface) as well as CLI (Command Line Interface).
@@ -40,7 +43,7 @@ Wait until the experiment and the node get ready (the node color turns green). R
 
 ![](img/cr-etel-tutorial/pic6_ssh.png)
 
-This opens as SSH terminal session on the Sensor Cluster Controller, which is used to prepare and conduct your sensor cluster experiment, as described in the second part of the Fed4FIRE LOG-a-TEC tutorial.
+This opens as SSH terminal session on the Sensor Cluster Controller, which is used to prepare and conduct your sensor cluster experiment, as described in the [second part of the Fed4FIRE LOG-a-TEC tutorial](cr-etel-tutorial-part2.html).
 
 ![](img/cr-etel-tutorial/pic7_term.png)
 

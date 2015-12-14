@@ -14,7 +14,7 @@ The tutorial assumes that:
 
  * you know how to create and edit text files from the Linux command line,
  * you are familiar with the basics of the Python programming language (otherwise see [The Python Tutorial](https://docs.python.org/2/tutorial/)),
- * you know the basic concepts of the LOG-a-TEC testbed (testbed clusters, coordinators, nodes and radios - otherwise see [LOG-a-TEC overview](http://log-a-tec.eu/overview.html)) and
+ * you know the basic concepts of the LOG-a-TEC testbed (testbed clusters, coordinators, nodes and radios - otherwise see [LOG-a-TEC overview](cr.html)) and
  * you have shell (SSH) access to the Sensor Cluster Controller (SCC), for example through the jFED Experimenter GUI.
 
 ## Writing a "Hello World" experiment
@@ -50,7 +50,7 @@ Log into the Sensor Cluster Controller and save the following script into a file
 
 Further reading:
 
- * For a description of the underlying protocol, see [testbed access using ALH protocol](http://log-a-tec.eu/software.html#testbed-access-using-alh-protocol).
+ * For a description of the underlying protocol, see [testbed access using ALH protocol](cr-software.html#testbed-access-using-alh-protocol).
 
 ### Running with OMF
 

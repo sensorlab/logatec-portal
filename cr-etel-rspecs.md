@@ -10,7 +10,7 @@ AM v3 is accessible through: `https://log-a-tec.ijs.si:12346`
 The URN of the component manager is: `urn:publicid:IDN+log-a-tec+authority+cm`
 
 ### Nodes
-The advertised nodes are SCCs - Sensor Cluster Controllers, each providing access to a particular [VESNA sensor cluster](http://www.log-a-tec.eu/overview.html#locations).
+The advertised nodes are SCCs - Sensor Cluster Controllers, each providing access to a particular [VESNA sensor cluster](cr.html#locations).
 
 Currently, two VESNA sensor clusters are supported, both in the town of Logatec, one in the city center and another in the industrial zone.
 
