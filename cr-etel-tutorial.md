@@ -7,7 +7,7 @@
 
 # Fed4FIRE LOG-a-TEC Tutorial
 
-This tutorial shows the basic steps required to develop, run and retrieve the results of simple cognitive radio experiments on the LOG-a-TEC testbed. It describes how to establish a terminal session with the Sensor Cluster Controller and how to use the terminal session to run an experiment directly from the command line or from an OMF Experiment Controller. Through several working examples it then demonstrates how you can write Python scripts that communicate with the individual nodes in the testbed using the ALH protocol. Where necessary, it provides links to more in-depth LOG-a-TEC documentation and other resources on the web.
+This tutorial shows the basic steps required to develop, run and retrieve the results of simple cognitive radio experiments on the LOG-a-TEC testbed. It describes how to establish a terminal session with the Sensor Cluster Controller and how to use the terminal session to run an experiment directly from the command line or from an OMF Experiment Controller. Through several working examples it then demonstrates how you can write Python scripts that communicate with the individual nodes and control the experimental radio hardware in the testbed using the ALH protocol. Where necessary, it provides links to more in-depth LOG-a-TEC documentation and other resources on the web.
 
 The tutorial assumes that:
 
@@ -15,7 +15,7 @@ The tutorial assumes that:
  * you are familiar with the basics of the Python programming language (otherwise see [The Python Tutorial](https://docs.python.org/2/tutorial/)),
  * you know the basic concepts of the LOG-a-TEC testbed (testbed clusters, coordinators, nodes and radios - otherwise see [LOG-a-TEC overview](cr.html)),
  * you have a web browser capable of running the jFed Experimenter GUI and
- * you have a Fed4FIRE User Certificate and the certificate password.
+ * you have a Fed4FIRE User Certificate and the certificate password (otherwise see [Fed4FIRE tutorials page](http://www.fed4fire.eu/tutorials/)).
 
 ## Part 1: Establish a SSH terminal session to a Sensor Cluster Controller (SCC) 
 
@@ -80,7 +80,7 @@ Log into the Sensor Cluster Controller and save the following script into a file
     import vesna.omf
 
     def main():
-        # Set up logging to show informational messages. It's always useful to
+        # Set up logging to show informational messages. It's often useful to
         # see what is going on behind the scenes.
         logging.basicConfig(level=logging.INFO)
 
@@ -96,9 +96,14 @@ Log into the Sensor Cluster Controller and save the following script into a file
 
     main()
 
+*Note: reference documentation for classes and methods from the Python library is accessible from the SSC terminal using the `pydoc` tool. For example, to look up documentation for the `vesna.omf.ALH` class, use:*
+
+    pydoc vesna.omf.ALH
+
 Further reading:
 
  * For a description of the underlying protocol, see [testbed access using ALH protocol](cr-software.html#testbed-access-using-alh-protocol).
+ * Source of the Python library is available [on GitHub](https://github.com/avian2/vesna-alh-tools).
 
 ### Running with OMF
 
@@ -120,8 +125,8 @@ To run an experiment using OMF, we first need to create the Experiment Descripti
 
     # When all our OMF resources are ready...
     onEvent(:ALL_UP) do |event|
-        # execute the "01-hello.py" Python script using the resources in group
-        # Actor. The script is located in the same directory as the ED.
+      # execute the "01-hello.py" Python script using the resources in group
+      # Actor. The script is located in the same directory as the ED.
       path = File.join(File.dirname(__FILE__), "01-hello.py")
       group("Actor").exec("python #{path}")
     end
@@ -199,14 +204,10 @@ This should produce output similar to the following:
     INFO:vesna.alh:response: Coordinator version 2.45
     Coordinator version 2.45
 
-Similar to the OMF example, what you see on the screen includes both the output of our `print` statement (the last line) and the debugging output produced by the `vesna.alh` module (preceeding lines).
+Similar to the OMF example, what you see on the screen includes both the output of our `print` statement (the last line) and the debugging output produced by the `vesna.alh` module (preceeding lines starting with `INFO:vesna.alh`).
 
 
 ## Part 3: Controlling the testbed nodes from SCC
-
-*Note: reference documentation for classes and methods from the Python library is accessible from the SSC terminal using the `pydoc` tool. For example, to look up documentation for the `vesna.omf.ALH` class, use:*
-
-    pydoc vesna.omf.ALH
 
 ### Accessing individual nodes
 
@@ -233,7 +234,7 @@ Save the following as `02-proxy.py`:
         coordinator = vesna.omf.ALH()
 
         # Establish a connection with the sensor node 19 by proxying requests
-        # through the coordinator. We do this by creating an instance of the #
+        # through the coordinator. We do this by creating an instance of the
         # vesna.alh.ALHProxy object. This object supports GET and POST requests
         # in the same way as the coordinator object.
         node19 = vesna.alh.ALHProxy(coordinator, 19)
@@ -291,7 +292,7 @@ Run the script from the command-line:
 
     CLUSTER_UID=lgt-industrial python 03-query.py
 
-This should produce output similar to the following:
+This should produce output similar to the following. Note that since we did not configure the logging library, the raw ALH requests are not printed in this example.
 
     Spectrum sensing configurations for node 25:
     dev #0, CC2500, 4 configs:
