@@ -1,3 +1,6 @@
+<!-- vim: linebreak filetype=markdown expandtab ts=4 sw=4
+-->
+
 <meta charset="utf-8">
 
 [TOC]
@@ -76,6 +79,8 @@ The following is a list of the major software components of the LOG-a-TEC testbe
  * [vesna-alh-tools](https://github.com/sensorlab/vesna-alh-tools) is a library and a collection of tools that allow for interaction with the testbed and experiment control from the Python language. [vesna-alh-js](https://github.com/sensorlab/vesna-alh-js) is a similar, although less developed library, using Javascript.
  * [ProtoStack](https://github.com/sensorlab/ProtoStack) is a graphical tool for network stack development. It can be used to experiment with dynamic composition of communication services in the Contiki OS.
  * [GRASS-RaPlaT](http://www-e6.ijs.si/RaPlaT/GRASS-RaPlaT_main_page.htm) is an open-source radio planning tool. It contains a number of channel models that can be used to calculate radio coverage of a single node or a whole network. Integration with the LOG-a-TEC testbed provides raster maps of the area surrounding the testbed and can be used, for example, to predict received signal strengths for radio links in an experiment.
+ * [URLs, URNs and RSpecs](cr-etel-rspecs.html) used for integration with Fed4FIRE.
+
 
 See [software](cr-software.html) page for more details on testbed software.
 
@@ -91,7 +96,13 @@ See [experiments](cr-experiments.html) page for more details on past experiments
 
 <img src="http://log-a-tec.eu/munin/localdomain/localhost.localdomain/count_nodes-week.png">
 
-### Publications and tutorials
+### Fed4FIRE documentation
+
+The LOG-a-TEC testbed is a member of the Fed4FIRE federation of testbeds.
+
+ * A tutorial that shows basic steps required to develop, run and retrieve the results of simple radio experiments: [Fed4FIRE LOG-a-TEC Tutorial](cr-etel-tutorial.html).
+
+### Other publications and tutorials
 
 The following material is available for LOG-a-TEC.
 
