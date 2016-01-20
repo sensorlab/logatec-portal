@@ -96,7 +96,9 @@ Log into the Sensor Cluster Controller and save the following script into a file
 
     main()
 
-*Note: reference documentation for classes and methods from the Python library is accessible from the SSC terminal using the `pydoc` tool. For example, to look up documentation for the `vesna.omf.ALH` class, use:*
+Reference documentation for classes and methods from the Python library is [accessible on-line](https://vesna-alh-tools.readthedocs.org/en/latest/) or from the SSC terminal using the `pydoc` tool.
+
+For example, to look up documentation for the `vesna.omf.ALH` class, use:
 
     pydoc vesna.omf.ALH
 
