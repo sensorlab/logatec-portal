@@ -58,6 +58,8 @@ The table below summarizes the major conceptual and technical evolution steps.
 		<tr>
 			 <td>Remote access<td>
 			 <td colspan="3">Remote monitoring, reconfiguration and experimentation via http.<td>
+			 <td></td>
+			 <td></td>
 		</tr>
 		<tr>
 			<td>Selected publications</td>

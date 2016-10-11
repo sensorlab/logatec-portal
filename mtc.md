@@ -17,4 +17,4 @@ The SNN-S272 board suppoorts long range, low power communication in the 860-1000
 
 Using the SigFox base station, transceivers and the LOG-a-TEC facilities, we are able to perform experiments with the intelligent control of transceivers as depicted in the figure below. This is part the [elastic Wireless Networking Experimentation (eWINE)](https://ewine-project.eu/) project. 
 
-![Intelligent transceiver control](img/mtc/SNPN-UWB.png)
+![Intelligent transceiver control](img/mtc/ewineSC2.png)
