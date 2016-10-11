@@ -61,9 +61,9 @@ The table below summarizes the major conceptual and technical evolution steps.
 		</tr>
 		<tr>
 			<td>Selected publications</td>
-			<td>[1], [2], [3]</td>
-			<td>[4], [5], [6]</td>
-			<td></td>
+			<td>[1], [2], [3], [4]</td>
+			<td>[5], [6], [7]</td>
+			<td>[8]</td>
 		</tr>
 	</tbody>
 </table>
@@ -90,4 +90,5 @@ Any publications (e.g. academic reports, papers, other disclosure of results) co
   <li>[Adnan Bekan, Mihael Mohorcic, Justin Cinkelj, Carolina Fortuna: An architecture for fully reconfigurable plug-and-play wireless sensor network testbed, IEEE Globecom, San Diego, California, USA.](http://sensorlab.ijs.si/files/publications/Bekan_Adnan_GLOBECOM_2015.pdf)</li>
   <li>[Carolina Fortuna, Mihael Mohorcic: A Framework for Dynamic Composition of Communication Services, ACM Transactions on Sensor Networks, Vol 11, Issue 2.](http://sensorlab.ijs.si/files/publications/Fortuna_Programmable_Network_ProtoStack.pdf)</li>
   <li>[Adnan Bekan: A RESTful based architecture for reconfigurable experimental wireless sensor network testbed, MSc thesis, MPS, Ljubljana, Slovenia.](http://sensorlab.ijs.si/files/publications/2015_10_02_master_thesis_Adnan_Bekan.pdf)</li>
+   <li>[BREGAR, Klemen, HROVAT, Andrej, MOHORČIČ, Mihael. NLOS channel detection with multilayer perceptron in low - rate personal area networks for indoor localization accuracy improvement. V: PAVLIN, Majda (ur.), et al. Zbornik : 1. del = Proceedings : part 1. Ljubljana: Mednarodna podiplomska šola Jožefa Stefana, 2016, str. 130-139.](http://ipssc.mps.si/2016/Proceedings8_IPSSC_2016_Part1.pdf)</li>
 </ol>
