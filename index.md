@@ -56,10 +56,8 @@ The table below summarizes the major conceptual and technical evolution steps.
 			<td>Unix, Contiki, Custom</td>
 		</tr>
 		<tr>
-			 <td>Remote access<td>
-			 <td colspan="3">Remote monitoring, reconfiguration and experimentation via http.<td>
-			 <td></td>
-			 <td></td>
+			 <td>Remote access</td>
+			 <td colspan="3">Remote monitoring, reconfiguration and experimentation via http.</td>
 		</tr>
 		<tr>
 			<td>Selected publications</td>
