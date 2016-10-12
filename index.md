@@ -41,7 +41,7 @@ The table below summarizes the major conceptual and technical evolution steps.
 			<td>Software components and modules</td>
 			<td>spectrum sensing by energy detection, signal generation, game theoretic power allocation</td>
 			<td>custom protocol stacks, spectrum sensing by energy detection and covariance, signal generation including wireless mic profiles, game theoretic power allocation</td>
-			<td>localization, LoS/nLoS classification, link quality estimation, custom protocol stacks, spectrum sensing by energy detection and covariance, signal generation including wireless mic profiles, game theoretic power allocation</td>
+			<td>localization, LoS/nLoS classification, link quality classification and prediction, custom protocol stacks, spectrum sensing by energy detection and covariance, signal generation including wireless mic profiles, game theoretic power allocation</td>
 		</tr>
 		<tr>
 			<td>HW platform</td>
