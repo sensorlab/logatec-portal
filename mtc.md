@@ -11,7 +11,9 @@ The SNPN-UWB board supports communication over UWB channels in the 3.5 GHz to 6.
 
 ##Long range, low power communication using LoRa and the SNN-S272 board
 
-The SNN-S272 board supports long range, low power communication in the 860-1000MHz frequency band based on the [Semtech SX-1272](http://www.semtech.com/wireless-rf/rf-transceivers/sx1272/) transceiver.
+SNN-S272 is a LoRa radio module supporting long range, low power communication in the 860-1000MHz frequency band based on the [Semtech SX-1272](http://www.semtech.com/wireless-rf/rf-transceivers/sx1272/) transceiver. It was designed for the for VESNA development board connecting to it over 12 pin VESNABUS connector. The core of the module is SX1272 transceivers, which employs LoRa™ modulation.  So it’s perfect for low data rate application, where long range and low power are necessary. Module is compatible with LoRaWAN LMiC library.
+
+![SNN-S272 board](img/mtc/SNN-272.png)
 
 ##Long range, low power communication using SigFox
 
