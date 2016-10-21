@@ -6,4 +6,7 @@ build:
 clean:
 	rm -rf output
 
-.PHONY: all build clean
+compare:
+	./compare.sh | view -
+
+.PHONY: all build clean compare
