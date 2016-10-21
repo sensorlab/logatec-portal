@@ -1,6 +1,7 @@
+title: URLs, URNs and RSpecs
+
 <!-- vim: linebreak filetype=markdown expandtab ts=4 sw=4
 -->
-<meta charset="utf-8">
 
 ## URLs, URNs and RSpecs
 

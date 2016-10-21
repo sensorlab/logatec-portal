@@ -1,7 +1,7 @@
+title: Cognitive Radio
+
 <!-- vim: linebreak filetype=markdown expandtab ts=4 sw=4
 -->
-
-<meta charset="utf-8">
 
 [TOC]
 

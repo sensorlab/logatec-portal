@@ -1,4 +1,7 @@
-<meta charset="utf-8">
+title: VESNA-based Intelligent Motorhome
+
+<!-- vim: linebreak filetype=markdown expandtab ts=4 sw=4
+-->
 
 # VESNA-based Intelligent Motorhome
 
