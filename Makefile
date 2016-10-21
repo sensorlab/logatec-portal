@@ -1,12 +1,15 @@
 all: build
 
-build:
-	pelican content
+env:
+	scripts/setup.sh
+
+build: env
+	scripts/build.sh
 
 clean:
 	rm -rf output
 
 compare:
-	./compare.sh | view -
+	scripts/compare.sh | view -
 
 .PHONY: all build clean compare
