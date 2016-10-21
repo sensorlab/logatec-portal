@@ -7,29 +7,48 @@ title: VESNA Based Air Quality Monitoring
 
 # VESNA Based Air Quality Monitoring
 
-The LOG-a-TEC testbed consists of several hardware components as described in the following sections.
+<p>Select the id of your AQA unit:
+<select id="nodes" class="nodes">
+  <option value="CS2_000" selected="selected">JSI_CS2</option>
+</select></p>
+
+<div id="sensors">
+   <div id="voc" style="width: 185px; height: 300px;"></div>
+   <div id="co" style="width: 185px; height: 300px;"></div>
+   <div id="h2s" style="width: 185px; height: 300px;"></div>
+   <div id="no" style="width: 185px; height: 300px;"></div>
+   <div id="no2" style="width: 185px; height: 300px;"></div>
+   <div id="o3" style="width: 185px; height: 300px;"></div>
+   <div id="so2" style="width: 185px; height: 300px;"></div>
+   <div id="humidity" style="width: 185px; height: 300px;"></div>
+   <div id="temp" style="width: 185px; height: 300px;"></div>
+   <div id="pressure" style="width: 185px; height: 300px;"></div>
+   <div id="temp-pt" style="width: 185px; height: 300px;"></div>
+   <div id="lightning" style="width: 185px; height: 300px;"></div>
+   <div id="motion" style="width: 185px; height: 300px;"></div>
+</div>
 
 ## Introduction
 
 The VESNA-based platforms as planned within the project were primarily designed for the use as personal/portable sensor units in selected pilot cities (Belgrade, Ljubljana and Vienna). However, functionally the same unit with some further sensors for context enrichment will also be used as a reference static outdoor platform for relative calibration and the same unit with different set of sensors could be used as an indoor platform. The version for initial Phase 1 tests in pilot cities has been developed in the form of a personal sensor unit. 
 The personal sensor unit is equipped with the following sensors:
 
- * NO2, O3, CO (ppb)
+ * VOC, H2S, SO, NO, NO2, O3, CO (ppb)
  * Temperature (°C) & Relative Humidity (%) - (Sensirion SHT21)
- * Accelerometer - Freescale MMA8453Q
+ * Pressure, Accelerometer, Lightning
 
-Personal sensor unit supports wireless connection to an Android smartphone and/or tablet via Wi-Fi. The smartphone will in turn serve as the communication gateway towards the server using any of available data connections. Besides gateway functionality its role is to enrich the data coming from the personal sensor unit with the GPS location, timestamps and user defined context.
+Personal sensor unit supports wireless connection to an Android smartphone and/or tablet via Bluetooth Smart Low Energy (BLE). The smartphone will in turn serve as the communication gateway towards the server using any of available data connections. Besides gateway functionality its role is to enrich the data coming from the personal sensor unit with the GPS location, timestamps and user defined context.
 
 The personal sensor unit is battery operated and includes 3 AA size rechargeable batteries providing 1300 mAh capacity. Charging of the battery is provided via micro USB connector. The autonomy of the personal sensor pack is in the range of 18 hours but depends on the mode of operation.
 
-The personal sensor unit is housed in a plastic box. For calibration purposes raw data can also be downloaded via USB, which needs to be parsed and imported into a spread sheet. Alternatively, access to data was also provided via Wi-Fi interface and purposely developed application.
+The personal sensor unit is housed in a plastic box. For calibration purposes raw data can also be downloaded via USB, which needs to be parsed and imported into a spread sheet. Alternatively, access to data was also provided via BLE interface and purposely developed application.
 
-<img src="img/aqa-top.png" style="height:250px"><img src="img/aqa-open.png" style="height:250px">
+<img src="img/aqa2.png">
 
 ## Architecture
 The VESNA air quality monitoring system comprises the VESNA personal sensor unit, smartphone app and the remote server. The smartphone app implements our custom LCSP (Lightweight Client Server Protocol) protocol which is used to send requests to the sensor node. VESNA is set to listen on a specific TCP port to which the smartphone connects. After connection the LCSP protocol is used to exchange information. When the data is downloaded from the sensor network, the mobile application has an option to visualize the data on graphs or as raw values. It also has an option to forward the data to the server in our custom JSON structure. The server stores the data in the database and translates the data to WFS and forwards it to the Snowflake over WFS-T in the XML format over HTTP POST request.
 
-<img src="img/citi-sense-architecture.png" style="height:400px">
+<img src="img/citi-sense-architecture2.png" style="height:400px">
 
 ### Lightweight Client Server Protocol - LCSP
 For the purpose of communication between sensor node and our server hosted at JSI we developed a new protocol called LCSP (Light-weight Client Server Protocol) which was inspired by HTTP protocol and is simple enough for a fast implementation on the VESNA platform. The protocol defines two requests, GET and POST which are understood by each VESNA sensor node. The GET is used for "safe" requests which do not change the state of the system and POST for "unsafe" requests which change the state of the system. The response is considered to be in a binary format, although it is normally in text format. Every response ends with a OK\r\n sequence and this is how the client recognizes the end of the response.
