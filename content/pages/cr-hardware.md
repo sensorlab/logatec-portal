@@ -1,4 +1,7 @@
-<meta charset="utf-8">
+title: Cognitive Radio Hardware
+
+<!-- vim: linebreak filetype=markdown expandtab ts=4 sw=4
+-->
 
 [TOC]
 

@@ -1,0 +1,347 @@
+{% extends "base.html" %}
+
+{% block title %}{{ SITENAME }}{% if page.title %} | {{ page.title }}{% endif %}{%endblock%}
+
+{% block content %}
+{{ page.content }}
+{% endblock %}
+
+
+{# Stuff below is for hacks on the AQA page #}
+
+{% block style %}
+{% if page.slug == "aqa" %}
+#sensors {
+	float: left;
+	margin-left: 5px;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	border:2px solid #cccccc;
+	-moz-box-shadow: 3px 3px 5px #cccccc;
+	-webkit-box-shadow: 3px 3px 5px #cccccc;
+	box-shadow: 3px 3px 5px #cccccc;
+	background: #fff;
+	border-radius:5px;
+	display: inline;
+}
+{% endif %}
+{% endblock style %}
+
+{% block jquery %}
+{% if page.slug == "aqa" %}
+<script src="js/jquery-2.1.1.min.js"></script>
+{% else %}
+<script src="js/jquery.js"></script>
+{% endif %}
+{% endblock jquery %}
+
+{% block script %}
+{% if page.slug == "aqa" %}
+	<script src="js/jquery.sensor.statistics-bak.js"></script>
+	<script>
+  	function loadSensors(node_id) {
+    $("#voc").sensorstatistics({
+      type: 'realtime',
+      id: "CITISENSE-JSI-"+node_id+"200543620",
+      title: "VOC",
+      subtitle: "Volatile Organic Compound",
+      min: 0,
+      max: 10000,
+      bands: [{
+           from: 0,
+           to: 1000,
+           color: '#55BF3B' // green
+      },{
+           from: 1000,
+           to: 5000,
+           color: '#DDDF0D' // yellow
+      },{
+           from: 5000,
+           to: 10000,
+           color: '#DF5353' // red
+      }],
+      refresh: 10000,
+    });
+    $("#co").sensorstatistics({
+      type: 'realtime',
+      id: "CITISENSE-JSI-"+node_id+"200543621",
+      title: "CO",
+      subtitle: "Carbon Monoxide",
+      min: 0,
+      max: 5000,
+      bands: [{
+           from: 0,
+           to: 2500,
+           color: '#55BF3B' // green
+      },{
+           from: 2500,
+           to: 4000,
+           color: '#DDDF0D' // yellow
+      },{
+           from: 4000,
+           to: 5000,
+           color: '#DF5353' // red
+      }],
+      refresh: 10000,
+    });
+    $("#h2s").sensorstatistics({
+      type: 'realtime',
+      id: "CITISENSE-JSI-"+node_id+"194543642",
+      title: "H2S",
+      subtitle: "Hydrogen Sulfide",
+      min: 0,
+      max: 3000,
+      bands: [{
+           from: 0,
+           to: 1500,
+           color: '#55BF3B' // green
+      },{
+           from: 1500,
+           to: 2500,
+           color: '#DDDF0D' // yellow
+      },{
+           from: 2500,
+           to: 3000,
+           color: '#DF5353' // red
+      }],
+      refresh: 10000,
+    });
+    $("#no").sensorstatistics({
+      type: 'realtime',
+      id: "CITISENSE-JSI-"+node_id+"194543643",
+      title: "NO",
+      subtitle: "Nitrogen Oxide",
+      min: 0,
+      max: 300,
+      bands: [{
+           from: 0,
+           to: 100,
+           color: '#55BF3B' // green
+      },{
+           from: 100,
+           to: 200,
+           color: '#DDDF0D' // yellow
+      },{
+           from: 200,
+           to: 300,
+           color: '#DF5353' // red
+      }],
+      refresh: 10000,
+    });
+    $("#no2").sensorstatistics({
+      type: 'realtime',
+      id: "CITISENSE-JSI-"+node_id+"200543624",
+      title: "NO2",
+      subtitle: "Nitrogen Dioxide",
+      min: 0,
+      max: 300,
+      bands: [{
+           from: 0,
+           to: 100,
+           color: '#55BF3B' // green
+      },{
+           from: 100,
+           to: 200,
+           color: '#DDDF0D' // yellow
+      },{
+           from: 200,
+           to: 300,
+           color: '#DF5353' // red
+      }],
+      refresh: 10000,
+    });
+    $("#o3").sensorstatistics({
+      type: 'realtime',
+      id: "CITISENSE-JSI-"+node_id+"200543625",
+      title: 'O<sub>3</sub>',
+      subtitle: "Ozone",
+      min: 0,
+      max: 500,
+      bands: [{
+           from: 0,
+           to: 100,
+           color: '#55BF3B' // green
+      },{
+           from: 100,
+           to: 240,
+           color: '#DDDF0D' // yellow
+      },{
+           from: 240,
+           to: 500,
+           color: '#DF5353' // red
+      }],
+      refresh: 10000,
+    });
+    $("#so2").sensorstatistics({
+      type: 'realtime',
+      id: "CITISENSE-JSI-"+node_id+"194543646",
+      title: "SO2",
+      subtitle: "Sulfur Dioxide",
+      min: 0,
+      max: 500,
+      bands: [{
+           from: 0,
+           to: 150,
+           color: '#55BF3B' // green
+      },{
+           from: 150,
+           to: 350,
+           color: '#DDDF0D' // yellow
+      },{
+           from: 350,
+           to: 500,
+           color: '#DF5353' // red
+      }],
+      refresh: 10000,
+    });
+    $("#humidity").sensorstatistics({
+      type: 'realtime',
+      id: "CITISENSE-JSI-"+node_id+"SHT217",
+      title: "Humidity",
+      subtitle: "Humidity",
+      min: 0,
+      max: 100,
+      bands: [{
+           from: 0,
+           to: 40,
+           color: '#55BF3B' // green
+      },{
+           from: 40,
+           to: 70,
+           color: '#DDDF0D' // yellow
+      },{
+           from: 70,
+           to: 100,
+           color: '#DF5353' // red
+      }],
+      refresh: 10000,
+    });
+    $("#temp").sensorstatistics({
+      type: 'realtime',
+      id: "CITISENSE-JSI-"+node_id+"SHT218",
+      title: "Temperature",
+      subtitle: "Temperature SHT",
+      min: -30,
+      max: 50,
+      bands: [{
+           from: -30,
+           to: -10,
+           color: '#2EFEF7' // light blue           
+      },{
+           from: -10,
+           to: 0,
+           color: '#2E64FE' // dark blue
+      },{
+           from: 0,
+           to: 20,
+           color: '#55BF3B' // green
+      },{
+           from: 20,
+           to: 35,
+           color: '#DDDF0D' // yellow
+      },{
+           from: 35,
+           to: 50,
+           color: '#DF5353' // red
+      }],
+      refresh: 10000,
+    });
+    $("#pressure").sensorstatistics({
+      type: 'realtime',
+      id: "CITISENSE-JSI-"+node_id+"LPS25H9",
+      title: "Pressure",
+      subtitle: "Barometer",
+      min: 900,
+      max: 1100,
+      bands: [{
+           from: 900,
+           to: 1013,
+           color: '#55BF3B' // green
+      },{
+           from: 1013,
+           to: 1050,
+           color: '#DDDF0D' // yellow
+      },{
+           from: 1050,
+           to: 1100,
+           color: '#DF5353' // red
+      }],
+      refresh: 10000,
+    });
+    $("#temp-pt").sensorstatistics({
+      type: 'realtime',
+      id: "CITISENSE-JSI-"+node_id+"PT100010",
+      title: "Temperature",
+      subtitle: "Temperature PT",
+      min: -30,
+      max: 50,
+      bands: [{
+           from: -30,
+           to: -10,
+           color: '#2EFEF7' // light blue           
+      },{
+           from: -10,
+           to: 0,
+           color: '#2E64FE' // dark blue
+      },{
+           from: 0,
+           to: 20,
+           color: '#55BF3B' // green
+      },{
+           from: 20,
+           to: 35,
+           color: '#DDDF0D' // yellow
+      },{
+           from: 35,
+           to: 50,
+           color: '#DF5353' // red
+      }],
+      refresh: 10000,
+    });
+    $("#lightning").sensorstatistics({
+      type: 'realtime',
+      id: "CITISENSE-JSI-"+node_id+"AS393511",
+      title: "Lightning",
+      subtitle: "Lightning",
+      min: 0,
+      max: 1,
+      bands: [{
+           from: 0,
+           to: 1,
+           color: '#55BF3B' // green
+      }],
+      refresh: 10000,
+    });
+    $("#motion").sensorstatistics({
+      type: 'realtime',
+      id: "CITISENSE-JSI-"+node_id+"compound12",
+      title: "Motion",
+      subtitle: "Accelerometer",
+      min: 0,
+      max: 1,
+      bands: [{
+           from: 0,
+           to: 1,
+           color: '#DF5353' // red
+      }],
+      refresh: 10000,
+    });
+  }
+  
+  function clearIntervals() {
+	intervals.forEach(function(interval) {
+	    window.clearInterval(interval);
+	});
+	intervals = [];      
+  }
+  
+  $(document).ready(function(){		
+		loadSensors($("#nodes").find(':selected').attr('value'));		
+		$("#nodes").change(function() {
+			clearIntervals();
+			loadSensors($("#nodes").find(':selected').attr('value'));
+		});
+	});
+</script>	
+{% endif %}
+{% endblock script %}
