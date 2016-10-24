@@ -47,4 +47,4 @@ into [sensorlab/logatec-portal](https://github.com/sensorlab/logatec-portal)!
 You need to have a user account on `log-a-tec.eu` and your user needs to be the
 member of the `logatec-web` group.
 
-    $ rsync -avz output/ log-a-tec.eu:/home/administrator/web/logatec
+    $ rsync -rvz output/ log-a-tec.eu:/home/administrator/web/logatec
