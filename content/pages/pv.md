@@ -1,4 +1,7 @@
-<meta charset="utf-8">
+title: Online Short-term Forecasting of Photovoltaic Energy Production
+
+<!-- vim: linebreak filetype=markdown expandtab ts=4 sw=4
+-->
 
 [TOC]
 

@@ -1,4 +1,5 @@
-*.html
-*.zip
 *~
 /.project
+output
+env
+*.pyc
