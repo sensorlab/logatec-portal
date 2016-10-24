@@ -1,6 +1,9 @@
-<meta charset="utf-8">
+title: Machine Type Communication
 
-# Overview
+<!-- vim: linebreak filetype=markdown expandtab ts=4 sw=4
+-->
+
+# Machine Type Communication
 
 The LOG-a-TEC experimental facility is evolving towards a setup in which dense machine type communication (MTC), machine to machine (M2M) and Internet of Things (IoT) technologies can be developed and evaluated. LOG-a-TEC 3.0 extends the [previous version](overview.html) of the facility with LR-WPAN and LPWAN, thus supporting at the same time, long and short range communications. In addition to previously existing [TVWS, clean slate non-IEEE 802.15.4, IEEE 802.15.4](hardware.html), and [custom protocol stacks, spectrum sensing by energy detection and covariance, signal generation including wireless mic profiles, game theoretic power allocation](software.html), LOG-a-TEC 3.0 adds the following new components: 
 
