@@ -1,6 +1,6 @@
 # LOG-a-TEC portal
 
-This repository contains content for the LOG-a-TEC portal.
+This repository contains content for the LOG-a-TEC portal (http://log-a-tec.eu).
 
 Content for pages is written in [Markdown][1] in files under `content/pages`.
 
