@@ -48,3 +48,5 @@ You need to have a user account on `log-a-tec.eu` and your user needs to be the
 member of the `logatec-web` group.
 
     $ rsync -rvz output/ log-a-tec.eu:/home/administrator/web/logatec
+
+**NOTE:** As GitHub cannot handle large files, the `dataset-files` directory must be copied inside `log-a-tec.eu:/home/administrator/web/logatec` manually. The `dataset-files` directory is located in the `HOME` directory of user `administrator`, i.e. `log-a-tec.eu:/home/administrator/dataset-files`.
