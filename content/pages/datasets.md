@@ -24,4 +24,6 @@ Provided are also transmission labels from two experts, 4 sets with various `noi
 * Dataset download: <a href="dataset-files/ws_traffic_20170606.zip">ws_traffic_20170606.zip</a>
 * Labeling tool: <a href="https://github.com/sensorlab/spectrum-labeling-tool">https://github.com/sensorlab/spectrum-labeling-tool</a>
 
-If you use this dataset or tool in your research, citation of the following paper, which also provides additional details about the dataset and the labeling tool, would be greatly appreciated: [To be added].
+If you use this dataset or tool in your research, citation of the following paper, which also provides additional details about the dataset and the labeling tool, would be greatly appreciated:
+
+[early access] <a href="https://ieeexplore.ieee.org/abstract/document/8977513">Timotej Gale, Tomaž Šolc, Rares-Andrei Moşoi, Mihael Mohorčič, and Carolina Fortuna. "Automatic Detection of Wireless Transmissions." *IEEE Access* (2020).</a>
