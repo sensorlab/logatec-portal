@@ -26,4 +26,4 @@ Provided are also transmission labels from two experts, 4 sets with various `noi
 
 If you use this dataset or tool in your research, citation of the following paper, which also provides additional details about the dataset and the labeling tool, would be greatly appreciated:
 
-[early access] <a href="https://ieeexplore.ieee.org/abstract/document/8977513">Timotej Gale, Tomaž Šolc, Rares-Andrei Moşoi, Mihael Mohorčič, and Carolina Fortuna. "Automatic Detection of Wireless Transmissions." *IEEE Access* (2020).</a>
+<a href="https://ieeexplore.ieee.org/abstract/document/8977513">Timotej Gale, Tomaž Šolc, Rares-Andrei Moşoi, Mihael Mohorčič, and Carolina Fortuna. "Automatic Detection of Wireless Transmissions." *IEEE Access*, vol. 8, pp. 24370-24384, 2020.</a>
