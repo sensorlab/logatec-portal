@@ -90,7 +90,7 @@ Folder structure is represented below this text. Folder contains four subfolders
   </ul>
 
 ## Download
-Data set available for download: [.zip, 1.9 GB](data.zip).
+Data set available for download: <a href="dataset-files/data.zip">.zip, 1.9 GB</a>
 
 ## Citation
 If you are using our data set in your research, citation of the following paper would be greatly appreciated.
