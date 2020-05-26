@@ -90,10 +90,10 @@ Folder structure is represented below this text. Folder contains four subfolders
   </ul>
 
 ## Download
-Data set available for download: [.zip, 1.9 GB](data.zip).
+Data set available for download: <a href="dataset-files/data.zip">.zip, 1.9 GB</a>
 
 ## Citation
-If you are using our data set in your research, citation of the following paper would be greatly appreciated.
+If you are using our data set in your research, citation of the [following paper](https://ieeexplore.ieee.org/document/8320781) would be greatly appreciated.
 
 ##### Plain text:
 K. Bregar and M. Mohorčič, "Improving Indoor Localization Using Convolutional Neural Networks on Computationally Restricted Devices," in IEEE Access, vol. 6, pp. 17429-17441, 2018.
