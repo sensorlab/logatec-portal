@@ -1,11 +1,11 @@
-title: Datasets
+title: LPWAN Trace Sets
 
 <!-- vim: linebreak filetype=markdown expandtab ts=4 sw=4
 -->
 
 # Datasets
 
-Various datasets produced by SensorLab are available on this page.
+LPWAN Trace Sets produced by SensorLab are available on this page.
 
 ## License notice
 
