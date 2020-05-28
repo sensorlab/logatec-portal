@@ -1,3 +1,8 @@
+title: 6LoWPAN
+
+<!-- vim: linebreak filetype=markdown expandtab ts=4 sw=4
+-->
+
 # LOG-a-TEC testbed in JSI campus
 
 > TODO: Add citation - everything from overview and hardware is cited from COINS article.

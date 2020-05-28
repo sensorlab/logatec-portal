@@ -5,6 +5,8 @@ title: Cognitive Radio Hardware
 
 [TOC]
 
+> TODO: Na vrhu opiši vesno, morbt verzije....za tm navedi ISMTV plate, SNR itd platke
+
 # Hardware components
 
 The LOG-a-TEC testbed consists of several hardware components as described in the following sections.
