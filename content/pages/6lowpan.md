@@ -2,8 +2,6 @@
 
 > TODO: Add citation - everything from overview and hardware is cited from COINS article.
 
-> TODO: Fix all pictures - position, width & height.
-
 > COMMENT: There is very por documentation of the testbed in campus, so I added few paragraphs on the beginning and few pictures (we can also wait to get better weather in the background).
 
 ## Overview
