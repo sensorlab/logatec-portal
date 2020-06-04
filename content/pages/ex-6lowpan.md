@@ -1,4 +1,4 @@
-title: 6LoWPAN
+title: 6LoWPAN experiment
 
 <!-- vim: linebreak filetype=markdown expandtab ts=4 sw=4
 -->
@@ -24,24 +24,7 @@ Each VESNA in testbed is extended with radio feature module - possible combinati
 
 <img src="img/6lowpan/hardware_lgtc.jpg"><img src="img/6lowpan/hardware_vesna.jpg">
 
-
 VESNA can run a dedicated OS (e.g., Contiki-NG) or custom firmware.
-
-## Contiki-NG operating system
-
-<img src="img/6lowpan/contiki_logo.png">
-
-Contiki-NG is an open source operating system for resource-constrained devices in the
-Internet of Things. It is a fork of the Conitki OS, focused primarily on IPv6 communication and modern IIoT platforms. The code footprint is on the order of a 100 kB and the memory usage can be configured to be as low as 10 kB [[1]](https://github.com/contiki-ng/contiki-ng/wiki).
-
-IJS developers added support for VESNA platform - current supported version is v4.5 [(Contiki-NG repository with VESNA implementation)](https://github.com/gcerar/contiki-ng "Contiki-NG GitHub").
-
-> TODO: Add link or not?
-
-One of the main features of Contiki-NG is a resource-efficient IPv6 network stack designed for lossy and low-power networks. The network stack comprises protocols such as IPv6, TCP, UDP, DNS, RPL, CoAP, LWM2M, and Websockets.  Beneath the IPv6 stack, Contiki-NG supports IEEE 802.15.4 wireless communication with Time-Slotted Channel Hopping (TSCH). [[2]](https://github.com/contiki-ng/contiki-ng/wiki/Documentation:-IPv6)
-
-With Contiki-NG implementation, configured to support VESNA platform we can form 6LoWAPN network in the testbed. It can be done with either 2.4 GHz or 868 MHz ISM band. Contiki-NG's configuration files allow us to manage and configure all preferred settings, such as TSCH hopping channels (which frequency's to use), Beacon sending interval, security and much more.
-With the help of testbed management system, we can choose which devices will be in the network (many clusters is also an option), which device will be the root of the DAG network, how long the experiment will last etc.
 
 ## Experiment workflow demonstration
 

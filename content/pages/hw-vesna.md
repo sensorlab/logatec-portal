@@ -5,13 +5,23 @@ title: Cognitive Radio Hardware
 
 [TOC]
 
-> TODO: Na vrhu opiši vesno, morbt verzije....za tm navedi ISMTV plate, SNR itd platke
+# VESNA
 
-# Hardware components
+[VESNA](http://sensorlab.ijs.si/hardware.html) is a modular and fully flexible platform for the development of wireless sensor networks developed at the SensorLab @ Jozef Stefan Institute. Based on the high-performance microcontroller with ARM Cortex-M3 core it is designed to meet the requirements of diverse applications.
 
-The LOG-a-TEC testbed consists of several hardware components as described in the following sections.
+In terms of modularity the platform consists of the VESNA core module (SNC) and a set of special feature modules (sensor node radio – SNR, sensor node expansion – SNE, sensor node power – SNP) that are used as/if needed.
 
-## VESNA SNE-ISMTV radios
+<figure>
+	<img src="img/hw/vesna/vesna.jpg" style="width:50%"><img src="img/hw/vesna/vesna-extension.png" style="width:50%">
+    <figcaption>VESNA platform with possible extension boards.</figcaption>
+</figure>
+
+Various peripherals including UART, I2C, SPI, USB, ADC and DAC allow hosting of different sets of sensors and/or actuators. It contains 512 kB FlashROM, 64 kB RAM and an 2 GB SD card for code and data storage. It can be powered with a variety of energy supply options including battery, solar panel and external power supply.
+
+<!-- TODO add more description? -->
+<br>
+
+## SNE-ISMTV radios
 
 For the purpose of spectrum sensing in ISM and TV bands VESNA platform has been complemented by a SNE-ISMTV sensor node extension (SNE) board. SNE-ISMTV adds general-purpose radio-frequency transceiver hardware to the VESNA wireless sensor node. This hardware is separate from the SNR (sensor node radio) transceiver used to connect VESNA nodes into a wireless management network. SNE-ISMTV can thus be used for cognitive radio experimentation without disrupting the back-channel network as long as any experimental transmissions are not overlapping with the frequency bands used by the SNR. SNE-ISMTV applications include for example spectrum sensing, continuous and packet-based signal transmission and reception with RSSI and link quality measurements, and IEEE 802.15.4 compatible networking experiments. Several models of the extension board are available covering different parts of the spectrum. Their capabilities differ slightly and are described in detail in the following subsections.
 
@@ -408,3 +418,7 @@ SNE-ISMTV contained no on-board non-volatile memory. It required that the firmwa
 There was also no programmatic way for the software to read the serial number of the hardware. This proved problematic when tracking deployment of a large number of sensor nodes in LOG-a-TEC testbeds. Reproducibility of experiments also depended on the experimenter manually noting the serial numbers of hardware involved in the experiment.
 
 To address these comments, we added a small amount of non-volatile EEPROM memory to SNE-ESHTER. Typically we predict that a calibration table will be written to the EEPROM once after the board has been tested. Firmware on sensor node core could then download the table from the board as needed. The specific EEPROM integrated circuit we used also provides a factory-programmed, read-only 128-bit identifier that can be used by the sensor node firmware to uniquely identify the radio that is installed.
+
+## SNR radios
+<!-- TODO add content - or delete this -->
+In development...
