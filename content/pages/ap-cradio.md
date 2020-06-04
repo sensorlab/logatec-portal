@@ -31,7 +31,7 @@ Additionally, a small number of software-defined radio nodes using the Ettus Res
 
 <img src="img/boxes.png" style="height:368px"><img src="img/poles.png" style="height:368px">
 
-See [hardware](cr-hardware.html) page for more details on testbed hardware.
+See [hardware](hw-vesna.html) page for more details on testbed hardware.
 
 ## Locations
 
@@ -90,7 +90,8 @@ See [software](cr-software.html) page for more details on testbed software.
  * Evaluating a game-theoretic approach to interference mitigation.
  * Evaluating over-the-air reprogramming strategies.
 
-See [experiments](cr-experiments.html) page for more details on past experiments performed on the testbed.
+See [experiments](ex-crewtv.html) page for more details on past experiments performed on the testbed.
+<!-- TODO change ex-crewtv.html reference and add experiments -->
 
 ## Getting started
 

@@ -10,7 +10,7 @@
 {# Stuff below is for hacks on the AQA page #}
 
 {% block style %}
-{% if page.slug == "aqa" %}
+{% if page.slug == "ap-aqa" %}
 #sensors {
 	float: left;
 	margin-left: 5px;
@@ -28,7 +28,7 @@
 {% endblock style %}
 
 {% block jquery %}
-{% if page.slug == "aqa" %}
+{% if page.slug == "ap-aqa" %}
 <script src="js/jquery-2.1.1.min.js"></script>
 {% else %}
 <script src="js/jquery.js"></script>
@@ -36,7 +36,7 @@
 {% endblock jquery %}
 
 {% block script %}
-{% if page.slug == "aqa" %}
+{% if page.slug == "ap-aqa" %}
 	<script src="js/jquery.sensor.statistics-bak.js"></script>
 	<script>
   	function loadSensors(node_id) {
