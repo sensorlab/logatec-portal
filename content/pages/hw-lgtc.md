@@ -3,7 +3,7 @@ title: Infrastructure node (lgtc)
 <!-- vim: linebreak filetype=markdown expandtab ts=4 sw=4
 -->
 
-# SNA-LGTC 
+# LGTC 
 
 LGTC is a custom designed single board computer based on the BeagleCore module running the Debian GNU/Linux operating system. It is capable of hosting microcontroller-based boards such as VESNA SNC and VESNA SNP.
 

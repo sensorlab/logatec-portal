@@ -11,11 +11,8 @@ title: 6LoWPAN experiment
 
 ## Overview
 
-There is 79 sensor nodes mounted at the campus of the Jožef Stefan Institute in Ljubljana, Slovenia. They cover approximately 3000 m2 of in-door and out-door space and are placed on light poles 3.5 m above the ground and on the surrounding buildings at heights from 2.0 to 9.3 m. To enable experiments in indoor as well as in mixed indoor/outdoor scenarios, the testbed is extended in an indoor environment with additional 20 UWB devices and one LPWA device. These are deployed on the second and third floors of the 28.4 m by 16.6 m building. Each node is directly accessible from the Internet using IPv6.
 
-<img src="img/6lowpan/testbed_tloris.png"><img src="img/6lowpan/testbed_table.png"><img src="img/6lowpan/testbed_device.jpg">
 
-This cluster is currently used for experiments with packet-based transmissions and dynamic network stack composition in wireless sensor networks. As seen on the table above, the LOG-a-TEC testbed devices can use several wireless technologies. Architecturally, we consider hybrid testbed devices with two separate functional blocks represented by the infrastructure node and the target node. Therefore, a generic infrastructure node that can be combined with various target nodes.
 
 ## Hardware
 

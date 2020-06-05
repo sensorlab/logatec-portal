@@ -15,27 +15,28 @@ In addition to permanently mounted nodes, several kinds of mobile nodes or instr
 
 <img alt="LOG-a-TEC testbed overview" src="img/vesnaHardwareOverview Y4.png" width=500>
 
-## Hardware
-
-[VESNA](http://sensorlab.ijs.si/hardware.html) sensor node core (SNC) provides processing and storage at each sensor node. It contains an ARM Cortex M3 CPU at 64 MHz, 512 kB FlashROM, 64 kB RAM and an 2 GB SD card for code and data storage.
-
-Different sensor node clusters contain different combinations of the following embedded radio hardware:
-
- * [CC2500-based](http://www.ti.com/product/cc2500) reconfigurable transceiver for the 2.4 GHz ISM band. Packet-based and continuous transmissions at up to 800 kHz bandwidth, 500 kbps and 0 dBm transmit power. Energy detection using RSSI with 5 ms per channel sampling.
- * [CC1101-based](http://www.ti.com/product/cc1101) reconfigurable transceiver for the upper UHF broadcast channels and 868 MHz European SRD band. Packet-based and continuous transmissions, including limited emulation of analogue transmissions, at up to 800 kHz bandwidth, 600 kbps and 12 dBm transmit power. Energy detection using RSSI with 5 ms per channel sampling.
- * SNE-ISMTV-UHF, a custom-designed energy detector for the UHF broadcast band from 470 MHz to 862 MHz. Channel bandwidth from 1.7 MHz to 8 MHz, 0.032 dB resolution, 50 ms per channel sampling.
- * SNE-ESHTER, a custom-designed spectrum sensing receiver for the UHF broadcast band from 470 MHz to 862 MHz. Off-line software processing of baseband samples up to 2 Msample/s, 25 kSample sample buffer depth. Energy detection up to 8 MHz bandwidth.
- * [AT86RF212](http://www.atmel.com/devices/at86rf212.aspx) and [AT86RF231](http://www.atmel.com/devices/at86rf231.aspx) transceivers, compatible with the IEEE 802.15.4 standard in the 2.4 GHz and 868 MHz bands.
-
-Additionally, a small number of software-defined radio nodes using the Ettus Reseach USRP N200 can be used in the test bed as needed. A Rohde & Schwarz SMBV100A vector signal generator and a FSV signal analyzer are available for on-site measurements.
-
-<img src="img/boxes.png" style="height:368px"><img src="img/poles.png" style="height:368px">
-
-See [hardware](hw-vesna.html) page for more details on testbed hardware.
-
 ## Locations
 
 Cognitive Radio part of LOG-a-TEC testbed consists of the following permanently mounted clusters:
+
+### JSI campus
+
+There is 79 sensor nodes mounted at the campus of the Jožef Stefan Institute in Ljubljana, Slovenia. They cover approximately 3000 m2 of in-door and out-door space and are placed on light poles 3.5 m above the ground and on the surrounding buildings at heights from 2.0 to 9.3 m. To enable experiments in indoor as well as in mixed indoor/outdoor scenarios, the testbed is extended in an indoor environment with additional 20 UWB devices and one LPWA device. These are deployed on the second and third floors of the 28.4 m by 16.6 m building.
+
+<figure>
+    <img src="img/6lowpan/testbed_joined.png">
+</figure>
+<!-- TODO get a better picture of devices in the testbed? -->
+
+Architecturally, we consider hybrid testbed devices with two separate functional blocks represented by the [infrastructure node](hw-lgtc.html) and the [target node](hw-vesna.html). Therefore, a generic infrastructure node that can be combined with various target nodes. As seen in the table above, devices are equipped with different wireless radio technology - you can read more about them in the [hardware section](hw-vesna.html).
+
+<figure>
+    <img src="img/6lowpan/testbed_joined2.png">
+</figure>
+
+Infrastructure nodes use 5GHz WiFi to avoid interference with experimental network and they are directly accessible from the Internet using IPv6. With server, which acts like a controller, we can automate various experiments and test different protocols. Nodes at IJS campus are running [Contiki-NG](cr-software.html), a small open source operating system for resource-constrained devices which is great for developing and testing IPv6 wireless communications.
+
+Cluster is currently used for experiments with packet-based transmissions and background noise measurements in wireless sensor networks. For more details, please continue at example [6LoWPAN network statistics](ex-6lowpan.html).
 
 ### Logatec city
 
@@ -45,23 +46,35 @@ Logatec is a small city with approximately 10.000 inhabitants in the south-west 
  * Logatec city centre, street level cluster (27 nodes)
  * Logatec city centre, antenna tower sensor (1 node)
 
+<img alt="Map with sensor node locations in Logatec" src="img/Logatec-clusters.png"><img alt="Sensor node mounted on a street light" src="img/UHFpole.png">
+
 These clusters are currently used for spectrum sensing experiments and radio environment mapping. Three distinct hardware node configurations are deployed:
 
  * nodes with CC1101 and AT86RF212 radios (transmission and sensing in UHF and 868 MHz band, blue on map),
  * nodes with CC2500 and AT86RF212 radios (transmission and sensing in 2.4 GHz band, red on map) and
  * nodes with SNE-ISMTV-UHF and AT86RF212 radios (sensing in UHF band, green on map).
 
-Nodes in the cluster are running the vesna-drivers firmware and use a dedicated, low-speed IEEE 802.15.4 management network (independent of the experimental radio hardware) for control and reprogramming. Each node is accessible from the Internet using a REST API and an application protocol similar to HTTP (ALH).
+Nodes in the cluster are running the vesna-drivers firmware and use a dedicated, low-speed IEEE 802.15.4 management network (independent of the experimental radio hardware) for control and reprogramming. Each node is accessible from the Internet using a REST API and an application protocol similar to HTTP ([ALH](cr-software.html)).
 
-<img alt="Map with sensor node locations in Logatec" src="img/Logatec-clusters.png"><img alt="Sensor node mounted on a street light" src="img/UHFpole.png">
+<img src="img/boxes.png" style="height:368px"><img src="img/poles.png" style="height:368px">
 
-### JSI campus
+Additionally, a small number of software-defined radio nodes using the Ettus Reseach USRP N200 can be used in the test bed as needed. A Rohde & Schwarz SMBV100A vector signal generator and a FSV signal analyzer are available for on-site measurements.
 
-20 sensor nodes are mounted at the campus of the Jožef Stefan Institute in Ljubljana, Slovenia. They cover approximately 3000 m<sup>2</sup> of in-door and out-door space.
+See [hardware](hw-vesna.html) page for more details on testbed hardware.
 
-This cluster is currently used for experiments with packet-based transmissions and dynamic network stack composition in wireless sensor networks. All nodes in the cluster contain one CC1101 and one AT86RF231 radio.
+## Hardware
 
-Nodes at JSI campus are running Contiki operating system with a dual, composable networking stack. A 6LoWPAN network using the AT86RF231 radio is used to control and reprogram the nodes. Each node is directly accessible from the Internet using IPv6.
+
+
+Different sensor node clusters contain different combinations of the following embedded radio hardware:
+
+ * [CC2500-based](http://www.ti.com/product/cc2500) reconfigurable transceiver for the 2.4 GHz ISM band. Packet-based and continuous transmissions at up to 800 kHz bandwidth, 500 kbps and 0 dBm transmit power. Energy detection using RSSI with 5 ms per channel sampling.
+ * [CC1101-based](http://www.ti.com/product/cc1101) reconfigurable transceiver for the upper UHF broadcast channels and 868 MHz European SRD band. Packet-based and continuous transmissions, including limited emulation of analogue transmissions, at up to 800 kHz bandwidth, 600 kbps and 12 dBm transmit power. Energy detection using RSSI with 5 ms per channel sampling.
+ * SNE-ISMTV-UHF, a custom-designed energy detector for the UHF broadcast band from 470 MHz to 862 MHz. Channel bandwidth from 1.7 MHz to 8 MHz, 0.032 dB resolution, 50 ms per channel sampling.
+ * SNE-ESHTER, a custom-designed spectrum sensing receiver for the UHF broadcast band from 470 MHz to 862 MHz. Off-line software processing of baseband samples up to 2 Msample/s, 25 kSample sample buffer depth. Energy detection up to 8 MHz bandwidth.
+ * [AT86RF212](http://www.atmel.com/devices/at86rf212.aspx) and [AT86RF231](http://www.atmel.com/devices/at86rf231.aspx) transceivers, compatible with the IEEE 802.15.4 standard in the 2.4 GHz and 868 MHz bands.
+
+
 
 ## Software
 

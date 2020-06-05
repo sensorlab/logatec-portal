@@ -8,11 +8,11 @@ title: Cognitive Radio Software
 # Software components
 
 ## Contiki-NG operating system
+<figure>
+    <img src="img/6lowpan/contiki_logo.png">
+</figure>
 
-<img src="img/6lowpan/contiki_logo.png">
-
-Contiki-NG is an open source operating system for resource-constrained devices in the
-Internet of Things. It is a fork of the Conitki OS, focused primarily on IPv6 communication and modern IIoT platforms. The code footprint is on the order of a 100 kB and the memory usage can be configured to be as low as 10 kB [[1]](https://github.com/contiki-ng/contiki-ng/wiki).
+Contiki-NG is an open source operating system for resource-constrained devices in the Internet of Things. It is a fork of the Conitki OS, focused primarily on IPv6 communication and modern IIoT platforms. The code footprint is on the order of a 100 kB and the memory usage can be configured to be as low as 10 kB [[1]](https://github.com/contiki-ng/contiki-ng/wiki).
 
 IJS developers added support for VESNA platform - current supported version is v4.5 [(Contiki-NG repository with VESNA implementation)](https://github.com/gcerar/contiki-ng "Contiki-NG on GitHub").
 
@@ -25,6 +25,8 @@ With Contiki-NG implementation, configured to support VESNA platform we can form
 With the help of testbed management system, we can choose which devices will be in the network (many clusters is also an option), which device will be the root of the DAG network, how long the experiment will last etc.
 
 <!-- TODO add link to experiments, when they are complete -->
+
+<br>
 
 ## Testbed access using ALH protocol
 
