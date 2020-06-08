@@ -7,7 +7,7 @@ LOG-a-TEC covers a set of diverse testbeds used for research purposes. It initia
 
 <br/>
 
-<!-- TODO -->
+<!-- TODO I changed this part...If it is OK, delete TODO-->
 To learn more about LOG-a-TEC, navigate the tabs of this site.
 
 To perform experiments, log in to the portal (you need to have an account).

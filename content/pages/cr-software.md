@@ -16,7 +16,7 @@ Contiki-NG is an open source operating system for resource-constrained devices i
 
 IJS developers added support for VESNA platform - current supported version is v4.5 [(Contiki-NG repository with VESNA implementation)](https://github.com/gcerar/contiki-ng "Contiki-NG on GitHub").
 
-<!-- TODO: Add link or not? -->
+<!-- TODO: Change link - repo will be moved to Sensorlab Github account -->
 
 One of the main features of Contiki-NG is a resource-efficient IPv6 network stack designed for lossy and low-power networks. The network stack comprises protocols such as IPv6, TCP, UDP, DNS, RPL, CoAP, LWM2M, and Websockets. Beneath the IPv6 stack, Contiki-NG supports IEEE 802.15.4 wireless communication with Time-Slotted Channel Hopping (TSCH). [[2]](https://github.com/contiki-ng/contiki-ng/wiki/Documentation:-IPv6)
 
@@ -24,7 +24,7 @@ With Contiki-NG implementation, configured to support VESNA platform we can form
 
 With the help of testbed management system, we can choose which devices will be in the network (many clusters is also an option), which device will be the root of the DAG network, how long the experiment will last etc.
 
-<!-- TODO add link to experiments, when they are complete -->
+An [example](ex-6lowpan.html) of experiment in the IJS Campus testbed using Contiki-NG.
 
 <br>
 
