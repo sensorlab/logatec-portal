@@ -80,7 +80,8 @@ The following is a list of the major software components of the LOG-a-TEC testbe
 ### Node firmware
 
  * *vesna-drivers* is a custom developed C library for developing node firmware images. It supports experiment control and data retrieval over an application protocol similar to HTTP (ALH). Typical application developed with vesna-drivers supports signal generation and energy detection.
- * [Contiki OS](http://www.contiki-os.org/) is an open source embedded operating system with cooperative multi-tasking. In LOG-a-TEC testbeds it has been extended to support two networking stacks in parallel and a composeable RIME stack. It is typically used for experimentation with packet-based transmissions in wireless sensor networks.
+ * [Contiki-NG](https://www.contiki-ng.org/) is an operating system for resource-constrained devices in the Internet of Things. With the help of vesna-drivers, it is a perfect tool for experimentation with IPv6 wireless sensor networks.
+ * [Contiki](http://www.contiki-os.org/) is an open source embedded operating system with cooperative multi-tasking. In LOG-a-TEC testbeds it has been extended to support two networking stacks in parallel and a composeable RIME stack. It is typically used for experimentation with packet-based transmissions in wireless sensor networks.
  * [vesna-spectrum-sensor](https://github.com/sensorlab/vesna-spectrum-sensor) is an open source spectrum sensing application for spectrum sensing using VESNA sensor nodes. It is typically used when measurements with a mobile sensor node are performed in the testbed. It uses a wired RS-232 connection with a PC to report measurements.
 
 ### Experiment support
