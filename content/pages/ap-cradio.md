@@ -92,21 +92,19 @@ The following is a list of the major software components of the LOG-a-TEC testbe
  * [GRASS-RaPlaT](http://www-e6.ijs.si/RaPlaT/GRASS-RaPlaT_main_page.htm) is an open-source radio planning tool. It contains a number of channel models that can be used to calculate radio coverage of a single node or a whole network. Integration with the LOG-a-TEC testbed provides raster maps of the area surrounding the testbed and can be used, for example, to predict received signal strengths for radio links in an experiment.
  * [URLs, URNs and RSpecs](cr-etel-rspecs.html) used for integration with Fed4FIRE.
 
-
 See [software](cr-software.html) page for more details on testbed software.
 
 ## Past experiments
 
- * CREW-TV: combining a static geo-location database with dynamic sensing data for avoiding interference with incumbent users in TV white spaces.
- * Evaluating a game-theoretic approach to interference mitigation.
- * Evaluating over-the-air reprogramming strategies.
-
-See [experiments](ex-crewtv.html) page for more details on past experiments performed on the testbed.
-<!-- TODO change ex-crewtv.html reference and add experiments -->
+ * [6LoWPAN network statistics](ex-6lowpan.html): packet statistics of 6LoWPAN network.
+ * [CREW-TV](ex-crew.html): combining a static geo-location database with dynamic sensing data for avoiding interference with incumbent users in TV white spaces.
+ * Evaluating a [Game-theoretic approach to interference mitigation](ex-game.html).
+ * Evaluating [Over-the-air reprogramming strategies](ex-otap.html).
 
 ## Getting started
 
 <img src="http://log-a-tec.eu/munin/localdomain/localhost.localdomain/count_nodes-week.png">
+<!-- TODO Why is this picture here? :)-->
 
 ### Fed4FIRE documentation
 
