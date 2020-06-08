@@ -60,11 +60,7 @@ Nodes in the cluster are running the vesna-drivers firmware and use a dedicated,
 
 Additionally, a small number of software-defined radio nodes using the Ettus Reseach USRP N200 can be used in the test bed as needed. A Rohde & Schwarz SMBV100A vector signal generator and a FSV signal analyzer are available for on-site measurements.
 
-See [hardware](hw-vesna.html) page for more details on testbed hardware.
-
 ## Hardware
-
-
 
 Different sensor node clusters contain different combinations of the following embedded radio hardware:
 
@@ -72,9 +68,10 @@ Different sensor node clusters contain different combinations of the following e
  * [CC1101-based](http://www.ti.com/product/cc1101) reconfigurable transceiver for the upper UHF broadcast channels and 868 MHz European SRD band. Packet-based and continuous transmissions, including limited emulation of analogue transmissions, at up to 800 kHz bandwidth, 600 kbps and 12 dBm transmit power. Energy detection using RSSI with 5 ms per channel sampling.
  * SNE-ISMTV-UHF, a custom-designed energy detector for the UHF broadcast band from 470 MHz to 862 MHz. Channel bandwidth from 1.7 MHz to 8 MHz, 0.032 dB resolution, 50 ms per channel sampling.
  * SNE-ESHTER, a custom-designed spectrum sensing receiver for the UHF broadcast band from 470 MHz to 862 MHz. Off-line software processing of baseband samples up to 2 Msample/s, 25 kSample sample buffer depth. Energy detection up to 8 MHz bandwidth.
- * [AT86RF212](http://www.atmel.com/devices/at86rf212.aspx) and [AT86RF231](http://www.atmel.com/devices/at86rf231.aspx) transceivers, compatible with the IEEE 802.15.4 standard in the 2.4 GHz and 868 MHz bands.
+ * [AT86RF231](https://www.microchip.com/wwwproducts/en/at86rf231) high performance 2.4GHz radio transceiver, targeted for the IEEE 802.15.4 standard, 6LoWPAN and other applications. Channels form including 11 to 26, adjustable output power from -17 dBm up to +3dBm, receiving sensitivity -101 dBm.
+ * [AT86RF212](https://www.microchip.com/wwwproducts/en/AT86RF212B) transceiver featuring European SRD band from 863 to 870 MHz, Chinese WPAN band from 779 to 787 MHz, North American ISM band from 902 to 928 MHz adn Japanese band from 915 to 930 MHz. Reconfigurable modulation (O-QPSK an BPSK) with different data rates (up to 1000 kbit/s), receiver sensitivity up to -110 dBm.
 
-
+See [hardware](hw-vesna.html) page for more details on testbed hardware.
 
 ## Software
 
