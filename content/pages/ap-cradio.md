@@ -5,7 +5,7 @@ title: Cognitive Radio
 
 [TOC]
 
-# Overview
+# Testbed overview
 
 The Cognitive Radio part of the LOG-a-TEC testbed consists of several clusters of permanently mounted VESNA sensor nodes that are dedicated to experimentation with spectrum sensing and radio communications within wireless sensor networks. Each sensor node in these clusters is equipped with multiple reconfigurable radio interfaces that can be used in various modes. A license from the local regulator allows for experimentation in TV whitespaces as well as frequency bands for unlicensed devices.
 

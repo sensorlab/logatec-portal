@@ -12,7 +12,7 @@ title: Cognitive Radio Software
     <img src="img/6lowpan/contiki_logo.png">
 </figure>
 
-Contiki-NG is an open source operating system for resource-constrained devices in the Internet of Things. It is a fork of the Conitki OS, focused primarily on IPv6 communication and modern IIoT platforms. The code footprint is on the order of a 100 kB and the memory usage can be configured to be as low as 10 kB [[1]](https://github.com/contiki-ng/contiki-ng/wiki).
+[Contiki-NG](https://www.contiki-ng.org/) is an open source operating system for resource-constrained devices in the Internet of Things. It is a fork of the Conitki OS, focused primarily on IPv6 communication and modern IIoT platforms. The code footprint is on the order of a 100 kB and the memory usage can be configured to be as low as 10 kB [[1]](https://github.com/contiki-ng/contiki-ng/wiki).
 
 IJS developers added support for VESNA platform - current supported version is v4.5 [(Contiki-NG repository with VESNA implementation)](https://github.com/gcerar/contiki-ng "Contiki-NG on GitHub").
 
