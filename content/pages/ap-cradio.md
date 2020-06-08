@@ -28,7 +28,7 @@ There is 79 sensor nodes mounted at the campus of the Jožef Stefan Institute in
 </figure>
 <!-- TODO get a better picture of devices in the testbed? -->
 
-Architecturally, we consider hybrid testbed devices with two separate functional blocks represented by the [infrastructure node](hw-lgtc.html) and the [target node](hw-vesna.html). Therefore, a generic infrastructure node that can be combined with various target nodes. As seen in the table above, devices are equipped with different wireless radio technology - you can read more about them in the [hardware section](hw-vesna.html).
+Architecturally, we consider hybrid testbed devices with two separate functional blocks represented by the [infrastructure node](hw-lgtc.html) and the [target node](hw-vesna.html). Therefore, a generic infrastructure node that can be combined with various target nodes. The infrastructure node is a custom designed single board computer based on the BeagleCore module running the Debian GNU/Linux operating system. The target node is a custom VESNA (VErsatile platform for Sensor Network Applications) device with an ARM Cortex-M3 micro controller application module and dedicated experimentation transceivers. As seen in the table above, devices are equipped with different wireless radio technology - you can read more about them in the [hardware section](hw-vesna.html).
 
 <figure>
     <img src="img/6lowpan/testbed_joined2.png">
@@ -148,3 +148,4 @@ Various experiments can be performed using the LOG-a-TEC infrastructure, for exa
 In order to access LOG-a-TEC you first need to get a user account. Please contact Matevz Vucnik, Tomaz Solc or Carolina Fortuna for this (firstname.lastname(at)ijs.si).
 
 Once you have a user account, [log in here](http://log-a-tec.eu/).
+<!-- TODO Log in where? -->

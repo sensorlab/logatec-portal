@@ -18,7 +18,7 @@ IJS developers added support for VESNA platform - current supported version is v
 
 <!-- TODO: Add link or not? -->
 
-One of the main features of Contiki-NG is a resource-efficient IPv6 network stack designed for lossy and low-power networks. The network stack comprises protocols such as IPv6, TCP, UDP, DNS, RPL, CoAP, LWM2M, and Websockets.  Beneath the IPv6 stack, Contiki-NG supports IEEE 802.15.4 wireless communication with Time-Slotted Channel Hopping (TSCH). [[2]](https://github.com/contiki-ng/contiki-ng/wiki/Documentation:-IPv6)
+One of the main features of Contiki-NG is a resource-efficient IPv6 network stack designed for lossy and low-power networks. The network stack comprises protocols such as IPv6, TCP, UDP, DNS, RPL, CoAP, LWM2M, and Websockets. Beneath the IPv6 stack, Contiki-NG supports IEEE 802.15.4 wireless communication with Time-Slotted Channel Hopping (TSCH). [[2]](https://github.com/contiki-ng/contiki-ng/wiki/Documentation:-IPv6)
 
 With Contiki-NG implementation, configured to support VESNA platform we can form 6LoWAPN network in the testbed. It can be done with either 2.4 GHz or 868 MHz ISM band. Contiki-NG's configuration files allow us to manage and configure all preferred settings, such as TSCH hopping channels (which frequency's to use), Beacon sending interval, security and much more.
 
