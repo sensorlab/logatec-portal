@@ -3,7 +3,7 @@ title: Infrastructure node (lgtc)
 <!-- vim: linebreak filetype=markdown expandtab ts=4 sw=4
 -->
 
-# LGTC 
+# LGTC
 
 LGTC is a custom designed single board computer based on the BeagleCore module running the Debian GNU/Linux operating system. It is capable of hosting microcontroller-based boards such as VESNA SNC and VESNA SNP.
 
@@ -80,11 +80,18 @@ The table below summarizes the major conceptual and technical evolution steps.
 		</tr>
 		<tr>
 			<td>Selected publications</td>
-			<td>[1], [2], [3], [4]</td>
-			<td>[5], [6], [7]</td>
-			<td>[8]</td>
+			<td><a href="http://sensorlab.ijs.si/files/publications/low-cost-testbed-development.pdf">[1]</a>,<a href="http://sensorlab.ijs.si/files/publications/Mohorcic-WSN_Based_Experimental_Infrastucture-ISWCS2013.pdf">[2]</a>,<a href="http://sensorlab.ijs.si/files/publications/Solc-SNE-ISMTV_VESNA_wireless_sensor_node_expansion_for_cognitive_radio_experiments_a.pdf">[3]</a>,<a href="http://sensorlab.ijs.si/files/publications/Anton_Power_Allocation_Game_Logatec_2014_corrected.pdf">[4]</a></td>
+			<td><a href="http://sensorlab.ijs.si/files/publications/Bekan_Adnan_GLOBECOM_2015.pdf">[5]</a>,<a href="http://sensorlab.ijs.si/files/publications/Fortuna_Programmable_Network_ProtoStack.pdf">[6]</a>,<a href="http://sensorlab.ijs.si/files/publications/2015_10_02_master_thesis_Adnan_Bekan.pdf">[7]</a></td>
+			<td><a href="https://www.researchgate.net/publication/308986067_NLOS_Channel_Detection_with_Multilayer_Perceptron_in_Low-Rate_Personal_Area_Networks_for_Indoor_Localization_Accuracy_Improvement">[8]</a></td>
 		</tr>
 	</tbody>
 </table>
 
-<!-- TODO fix publications reference in the table -->
+[1]:http://sensorlab.ijs.si/files/publications/low-cost-testbed-development.pdf
+[2]:http://sensorlab.ijs.si/files/publications/Mohorcic-WSN_Based_Experimental_Infrastucture-ISWCS2013.pdf
+[3]:http://sensorlab.ijs.si/files/publications/Solc-SNE-ISMTV_VESNA_wireless_sensor_node_expansion_for_cognitive_radio_experiments_a.pdf
+[4]:http://sensorlab.ijs.si/files/publications/Anton_Power_Allocation_Game_Logatec_2014_corrected.pdf
+[5]:http://sensorlab.ijs.si/files/publications/Bekan_Adnan_GLOBECOM_2015.pdf
+[6]:http://sensorlab.ijs.si/files/publications/Fortuna_Programmable_Network_ProtoStack.pdf
+[7]:http://sensorlab.ijs.si/files/publications/2015_10_02_master_thesis_Adnan_Bekan.pdf
+[8]:https://www.researchgate.net/publication/308986067_NLOS_Channel_Detection_with_Multilayer_Perceptron_in_Low-Rate_Personal_Area_Networks_for_Indoor_Localization_Accuracy_Improvement
