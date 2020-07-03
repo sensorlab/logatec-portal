@@ -104,7 +104,6 @@ See [software](cr-software.html) page for more details on testbed software.
 ## Getting started
 
 <img src="http://log-a-tec.eu/munin/localdomain/localhost.localdomain/count_nodes-week.png">
-<!-- TODO Why is this picture here? :)-->
 
 ### Fed4FIRE documentation
 
