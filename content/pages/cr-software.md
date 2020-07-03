@@ -8,8 +8,9 @@ title: Cognitive Radio Software
 # Software components
 
 ## Contiki-NG operating system
+
 <figure>
-    <img src="img/6lowpan/contiki_logo.png">
+    <img src="img/6lowpan/contiki_logo.png" width="200">
 </figure>
 
 [Contiki-NG](https://www.contiki-ng.org/) is an open source operating system for resource-constrained devices in the Internet of Things. It is a fork of the Conitki OS, focused primarily on IPv6 communication and modern IIoT platforms. The code footprint is on the order of a 100 kB and the memory usage can be configured to be as low as 10 kB [[1]](https://github.com/contiki-ng/contiki-ng/wiki).

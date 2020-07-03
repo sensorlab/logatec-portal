@@ -418,7 +418,3 @@ SNE-ISMTV contained no on-board non-volatile memory. It required that the firmwa
 There was also no programmatic way for the software to read the serial number of the hardware. This proved problematic when tracking deployment of a large number of sensor nodes in LOG-a-TEC testbeds. Reproducibility of experiments also depended on the experimenter manually noting the serial numbers of hardware involved in the experiment.
 
 To address these comments, we added a small amount of non-volatile EEPROM memory to SNE-ESHTER. Typically we predict that a calibration table will be written to the EEPROM once after the board has been tested. Firmware on sensor node core could then download the table from the board as needed. The specific EEPROM integrated circuit we used also provides a factory-programmed, read-only 128-bit identifier that can be used by the sensor node firmware to uniquely identify the radio that is installed.
-
-## SNR radios
-<!-- TODO add content - or delete this SNR radio part -->
-In development...
