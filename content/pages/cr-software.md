@@ -7,6 +7,27 @@ title: Cognitive Radio Software
 
 # Software components
 
+## Contiki-NG operating system
+<figure>
+    <img src="img/6lowpan/contiki_logo.png">
+</figure>
+
+[Contiki-NG](https://www.contiki-ng.org/) is an open source operating system for resource-constrained devices in the Internet of Things. It is a fork of the Conitki OS, focused primarily on IPv6 communication and modern IIoT platforms. The code footprint is on the order of a 100 kB and the memory usage can be configured to be as low as 10 kB [[1]](https://github.com/contiki-ng/contiki-ng/wiki).
+
+IJS developers added support for VESNA platform - current supported version is v4.5 [(Contiki-NG repository with VESNA implementation)](https://github.com/gcerar/contiki-ng "Contiki-NG on GitHub").
+
+<!-- TODO: Change link - repo will be moved to Sensorlab Github account -->
+
+One of the main features of Contiki-NG is a resource-efficient IPv6 network stack designed for lossy and low-power networks. The network stack comprises protocols such as IPv6, TCP, UDP, DNS, RPL, CoAP, LWM2M, and Websockets. Beneath the IPv6 stack, Contiki-NG supports IEEE 802.15.4 wireless communication with Time-Slotted Channel Hopping (TSCH). [[2]](https://github.com/contiki-ng/contiki-ng/wiki/Documentation:-IPv6)
+
+With Contiki-NG implementation, configured to support VESNA platform we can form 6LoWAPN network in the testbed. It can be done with either 2.4 GHz or 868 MHz ISM band. Contiki-NG's configuration files allow us to manage and configure all preferred settings, such as TSCH hopping channels (which frequency's to use), Beacon sending interval, security and much more.
+
+With the help of testbed management system, we can choose which devices will be in the network (many clusters is also an option), which device will be the root of the DAG network, how long the experiment will last etc.
+
+An [example](ex-6lowpan.html) of experiment in the IJS Campus testbed using Contiki-NG.
+
+<br>
+
 ## Testbed access using ALH protocol
 
 The testbed can be operated remotely through the LOG-a-TEC web portal. The user can select a cluster of VESNAs and configure them to perform sensing and/or transmission. As a result, the testbed is able to support sensing only experiments, transmission only experiments and also transmission based on sensing results. The LOG-a-TEC web portal also uses the GRASS-RaPlaT tool in order to (i) provide the virtual experiment planning via simulation in order to ascertain the best setup before the actual execution in the testbed as well as (ii) support the postprocessing and visualization of experimentation results.

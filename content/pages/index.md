@@ -3,86 +3,19 @@ title:
 <!-- vim: linebreak filetype=markdown expandtab ts=4 sw=4
 -->
 
-LOG-a-TEC covers a set of diverse testbeds used for research purposes. It initially started 7 years ago as an outdoor environmental sensing facility, it evolved towards [spectrum sensing and cognitive radio](cr-overview.html) as its largest component. It is also covering application areas (verticals) such as [photovoltaics](pv.html), [air quality](aqa.html) and [automotive](caravan.html). More recently, it is evolving towards a comprehensive heterogeneous [M2M/MTC/dense IoT setup](mtc.html) comprising LR-WPAN and LPWAN technologies. The one thing all setups have in common is that they are based on a version of the [VESNA hardware platform](http://sensorlab.ijs.si/hardware.html) which can be used as standalone or combined with other more powerful machines. VESNA is a modular and configurable embedded hardware platform developed by SensorLab.
-
-The table below summarizes the major conceptual and technical evolution steps.
-
-<table>
-	<tbody>
-		<tr>
-			<td></td>
-			<td>LOG-a-TEC 1.0</td>
-			<td>LOG-a-TEC 2.0</td>
-			<td><b>LOG-a-TEC 3.0</b></td>
-		</tr>
-		<tr>
-			<td>Wireless functionality</td>
-			<td>custom and advanced spectrum sensing and signal generating functions in sub-GHz spectrum</td>
-			<td>packet based experimentation, clean slate protocol design, composable and modular protocol stacks, custom and advanced spectrum sensing and signal generating functions in sub-GHz spectrum</td>
-			<td>ultra narrow band and ultra wide band, packet based experimentation, clean slate protocol design, composable and modular protocol stacks, custom and advanced spectrum sensing and signal generating functions in sub-GHz spectrum</td>
-		</tr>
-		<tr>
-			<td>Wireless technologies</td>
-			<td>TVWS, clean slate non-IEEE 802.15.4, IEEE 802.15.4</td>
-			<td>TVWS, clean slate non-IEEE 802.15.4, IEEE 802.15.4</td>
-			<td>LoRa, Sigfox, IEEE 802.15.4a, TVWS, clean slate non-IEEE 802.15.4, IEEE 802.15.4</td>
-		</tr>
-		<tr>
-			<td>Frequencies</td>
-			<td>470-862 MHz, 868MHz, 2.4GHz</td>
-			<td>470-862 MHz, 868MHz, 2.4GHz</td>
-			<td>860-1000MHz, 3.5 GHz to 6.5 GHz, 470-862 MHz, 868MHz, 2.4GHz</td>
-		</tr>
-		<tr>
-			<td>Wireless extentions</td>
-			<td>SNE-ISMTV-UHF (NXP TDA18219HN), SNE-ISMTV-TI868 (TI CC1101, Atmel AT86RF212), SNE-ISMTV-TI24 (TI CC2500,  Atmel AT86RF231)</td>
-			<td>SNE-ISMTV-TI868 (TI CC1101 868MHz), SNE-ISMTV-TI24 (TI CC2500 2.4 GHz)</td>
-			<td>SNN-S272 (Semtech SX-1272), SNPN-UWB (DWM1000 UWB), SNE-ESHTER (NXP TDA18219HN 470-862 MHz), SNE-ISMTV-TI868 (TI CC1101, Atmel AT86RF212), SNE-ISMTV-TI24 (TI CC2500,  Atmel AT86RF231)</td>
-		</tr>
-		<tr>
-			<td>Software components and modules</td>
-			<td>spectrum sensing by energy detection, signal generation, game theoretic power allocation</td>
-			<td>custom protocol stacks, spectrum sensing by energy detection and covariance, signal generation including wireless mic profiles, game theoretic power allocation</td>
-			<td>localization, LoS/nLoS classification, link quality classification and prediction, custom protocol stacks, spectrum sensing by energy detection and covariance, signal generation including wireless mic profiles, game theoretic power allocation</td>
-		</tr>
-		<tr>
-			<td>HW platform</td>
-			<td>VESNA 1.0</td>
-			<td>VESNA 1.0 and 2.0</td>
-			<td>VESNA 3.0</td>
-		</tr>
-		<tr>
-			<td>Operating system</td>
-			<td>Custom</td>
-			<td>Contiki, Custom</td>
-			<td>Unix, Contiki, Custom</td>
-		</tr>
-		<tr>
-			 <td>Remote access</td>
-			 <td colspan="3">Remote monitoring, reconfiguration and experimentation via http.</td>
-		</tr>
-		<tr>
-			<td>Selected publications</td>
-			<td>[1], [2], [3], [4]</td>
-			<td>[5], [6], [7]</td>
-			<td>[8]</td>
-		</tr>
-	</tbody>
-</table>
+LOG-a-TEC covers a set of diverse testbeds used for research purposes. It initially started 7 years ago as an outdoor environmental sensing facility, it evolved towards [spectrum sensing and cognitive radio](ap-cradio.html) as its largest component. It is also covering application areas (verticals) such as [photovoltaics](ap-pv.html), [air quality](ap-aqa.html) and [automotive](ap-caravan.html). More recently, it is evolving towards a comprehensive heterogeneous [M2M/MTC/dense IoT setup](ap-mtc.html) comprising LR-WPAN and LPWAN technologies. The one thing all setups have in common is that they are based on a version of the [VESNA hardware platform](hw-vesna.html) which can be used as standalone or combined with other more powerful machines. VESNA is a modular and configurable embedded hardware platform developed by [SensorLab] (http://sensorlab.ijs.si/hardware.html).
 
 <br/>
 
-<ul>
-  <li>To learn more, navigate the tabs of this site.
-  </li>
-  <li>To perform experiments, log in to the portal (you need to have an account).
-  <p><a class="btn" href="https://crn.log-a-tec.eu/">Log me in &raquo;</a></p>
-  </li>
-  <li>To find out more about us, go the our web site.
-  <p><a class="btn" href="http://sensorlab.ijs.si/">I want to know more &raquo;</a></p>
-  </li>
-</ul>
+<!-- TODO I changed this part...If it is OK, delete TODO-->
+To learn more about LOG-a-TEC, navigate the tabs of this site.
 
+To perform experiments, log in to the portal (you need to have an account).
+<a class="btn" href="https://crn.log-a-tec.eu/">Log me in &raquo;</a></p>
+
+To find out more about us, you are welcome to visit our web site or fell fre to contact us.
+<a class="btn" href="http://sensorlab.ijs.si/">I want to know more &raquo;</a></p>
+<!-- TODO -->
 
 ### LOG-a-TEC is citeware
 
