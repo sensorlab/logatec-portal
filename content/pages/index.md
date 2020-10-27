@@ -12,7 +12,7 @@ To learn more about LOG-a-TEC, navigate the tabs of this site.
 To perform experiments, log in to the portal (you need to have an account).
 <a class="btn" href="https://crn.log-a-tec.eu/">Log me in &raquo;</a></p>
 
-To find out more about us, you are welcome to visit our web site or fell fre to contact us.
+To find out more about us, you are welcome to visit our web site or feel free to contact us.
 <a class="btn" href="http://sensorlab.ijs.si/">I want to know more &raquo;</a></p>
 
 
