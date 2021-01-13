@@ -7,7 +7,7 @@ title: VESNA Based Air Quality Monitoring
 
 # Continuous Integration for Embedded Development
 
-Continuous integration (CI) is an automated process of integrating the code developed by various developers into a working software. It also introduces a feedback loop so that the developers always know how their code works with the others. CI should happen several times a day and there is no need for a separate integration phase when the development is done. The literature suggests that the developer waits no more than 10 minutes for the test results.
+Continuous integration (CI) is an automated process of integrating the code developed by various developers into a working software. It also introduces a feedback loop so that the developers always know how their code works with the others. CI should happen several times a day and there is no need for a separate integration phase when the development is done. The [literature](https://www.martinfowler.com/articles/continuousIntegration.html) suggests that the developer waits no more than 10 minutes for the test results.
 
 <figure>
     <center><img src="img/ci.png" style="width: 50%; height: 50%;"></center>
@@ -98,3 +98,7 @@ An example test case for a wireless communication system includes software for t
     $ assertEqual(nodeTX.data, nodeRX.data)
 
 The described testing approach was implemented in the testbed for the purpose of LoRa firmware development. Especially in the industry, there are situations where multiple developers work on the same code-base simultaneously. In such environments it can happen that a fix from one developer breaks a feature of another. By introducing automated testing on a real testbed, the integration problems get discovered and fixed early in the development process.
+
+## Cite
+
+[M. Vucnik et al., "Continuous Integration in Wireless Technology Development," in IEEE Communications Magazine, vol. 56, no. 12, pp. 74-81, December 2018, doi: 10.1109/MCOM.2018.1800107.](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8515680&isnumber=8570022) [PDF.](pdf/coins.pdf)

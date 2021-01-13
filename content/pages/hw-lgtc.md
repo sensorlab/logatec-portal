@@ -25,7 +25,7 @@ The power supply, supports multiple input source options. It can be connected to
 
 ## Communication interfaces
 
-The integration LGTC nad VESNA is done via custom hardware design and the adoption of selected interfaces and protocols. Both nodes are interconnected via application and development interfaces, providing the exchange of application data as well as remote low-level application debugging. The reliable development interface is based on JTAG and the application interface on protocols such as LCSP (Light-weight Client Server Protocol) or SLIP (Serial Line Internet Protocol) running on top of serial interface.
+The integration LGTC nad VESNA is done via custom hardware design and the adoption of selected interfaces and protocols. Both nodes are interconnected via application and development interfaces, providing the exchange of application data as well as remote low-level application debugging. The reliable development interface is based on JTAG and the application interface on protocols such as [LCSP](cr-software.html) (Light-weight Client Server Protocol) or SLIP (Serial Line Internet Protocol) running on top of serial interface.
 
 <figure>
     <img src="img/hw/lgtc/testbed-device.png">
