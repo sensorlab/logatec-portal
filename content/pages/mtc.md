@@ -4,4 +4,4 @@ title: Redirect to -> Machine Type Communication
 -->
 
 <!-- Here only to redirect from old page to new one... -->
-<meta http-equiv="refresh" content="0; URL=http://log-a-tec/ap-mtc.html" />
+<meta http-equiv="refresh" content="0; URL=http://log-a-tec.eu/ap-mtc.html" />
