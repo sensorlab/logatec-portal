@@ -25,26 +25,26 @@ Multilateration is a technique for determining the device's position based on ra
 
 Rewriting the equation gives us the following non-linear equation
 <figure>
-    <img src="img/ap-uwbloc/eq.png", style="width:50%;">
+    <img src="img/ap-uwbloc/eq.png", style="width:70%;">
 </figure>
 which can be linearized and written in a matrix form as:
 <figure>
-    <img src="img/ap-uwbloc/phi_mat.png", style="width:50%;">
+    <img src="img/ap-uwbloc/phi_mat.png", style="width:35%;">
 </figure>
 where x and y are the coordinates we are estimating and R is a non-linear term (R=x^2+y^2) which we ignore in a linear estimation.
 
 By using the linear least squares estimation, the over-defined system can be solved by using the following equation:
 <figure>
-    <img src="img/ap-uwbloc/phi.png", style="width:50%;">
+    <img src="img/ap-uwbloc/phi.png", style="width:40%;">
 </figure>
 The system of equations can be solved if there is one range measurement to the reference node more than there is the selected environment dimensions. In case we use 2D coordinate system, we need at least 3 range measurements to the reference nodes that are not colinear (not deployed on a straight line).
 
 Matrixes H and x are being determined by the following two equations:
 <figure>
-    <img src="img/ap-uwbloc/x.png", style="width:50%;">
+    <img src="img/ap-uwbloc/x.png", style="width:35%;">
 </figure>
 <figure>
-    <img src="img/ap-uwbloc/h.png", style="width:50%;">
+    <img src="img/ap-uwbloc/h.png", style="width:40%;">
 </figure>
 
 
@@ -66,13 +66,13 @@ RBL schemes require the localization object, being a person or a thing, is equip
 
 One of the notable RF DFL approaches is **RF tomography imaging (RTI)**. It exploits the concepts used in medicine and geophysics known as computed tomography (CT) where instead of X-rays RF tomography uses RF signals. It **mathematically reconstructs the propagation medium structure** based on the analysis of a signal propagation in the selected area. One of the possible approaches to reconstruct a propagation medium is known as **shadowing or attenuation-based model**. It is based on calculating the difference between channel measurements during the offline calibration and online operation. Changes in link attenuations of the monitored area are modeled as 
 <figure>
-    <img src="img/ap-uwbloc/ywxn.png", style="width:50%;">
+    <img src="img/ap-uwbloc/ywxn.png", style="width:35%;">
 </figure>
 where y is an L x N vector with the measured attenuation of L links, W is an N x L weighting matrix, ∆𝒏 is a noise vector of the links while x is the N x 1 image vector which is going to be approximated by the RTI algorithm. Each column in the weighting matrix W represents a single pixel, while the value in each row presents a weighting factor for each pixel on a corresponding link. 
 
 Each link is defined by an ellipse with foci at the communicating nodes and determines the locations affecting the link. The elliptical model is a severe simplification of the actual sensitivity area of a corresponding RF link. Since a single solution of previous equation does not exist, it is approximated by the maximum a posteriori (MAP) approximation presented by the following
 <figure>
-    <img src="img/ap-uwbloc/xmap.png", style="width:50%;">
+    <img src="img/ap-uwbloc/xmap.png", style="width:70%;">
 </figure>
 where Cx is an a priori covariance matrix with x as a zero-mean Gaussian random field and 𝜎 as noise variance. Those two terms are used for regularization. 
 
