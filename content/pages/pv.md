@@ -4,4 +4,4 @@ title: Redirect to -> Online Short-term Forecasting of Photovoltaic Energy Produ
 -->
 
 <!-- Here only to redirect from old page to new one... -->
-<meta http-equiv="refresh" content="0; URL=http://log-a-tec/ap-pv.html" />
+<meta http-equiv="refresh" content="0; URL=http://log-a-tec.eu/ap-pv.html" />
