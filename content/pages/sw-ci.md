@@ -53,3 +53,7 @@ The described testing approach was implemented in the testbed for the purpose of
 ## Cite
 
 [M. Vucnik et al., "Continuous Integration in Wireless Technology Development," in IEEE Communications Magazine, vol. 56, no. 12, pp. 74-81, December 2018, doi: 10.1109/MCOM.2018.1800107.](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8515680&isnumber=8570022) [PDF.](https://arxiv.org/pdf/1804.01814.pdf)
+
+[M. Vucnik et al., "Integrating Research Testbeds into Social Coding Platforms," 2018 European Conference on Networks and Communications (EuCNC), Ljubljana, Slovenia, 2018, pp. 230-234, doi: 10.1109/EuCNC.2018.8443242.](https://ieeexplore.ieee.org/document/8443242) [PDF.](https://www.researchgate.net/publication/325091263_Integrating_Research_Testbeds_into_Social_Coding_Platforms)
+
+[I. Boškov, et al., "Time-to-Provision Evaluation of IoT Devices Using Automated Zero-Touch Provisioning," GLOBECOM 2020 - 2020 IEEE Global Communications Conference, Taipei, Taiwan, 2020, pp. 1-7, doi: 10.1109/GLOBECOM42002.2020.9348119.](https://ieeexplore.ieee.org/document/9348119) [PDF.](https://arxiv.org/pdf/2009.09731.pdf)
