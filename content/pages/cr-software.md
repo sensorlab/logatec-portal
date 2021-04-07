@@ -29,7 +29,7 @@ An [example](ex-6lowpan.html) of experiment in the IJS Campus testbed using Cont
 
 <br>
 
-## Testbed access using ALH protocol
+## Testbed access using LCSP protocol
 
 The testbed can be operated remotely through the LOG-a-TEC web portal. The user can select a cluster of VESNAs and configure them to perform sensing and/or transmission. As a result, the testbed is able to support sensing only experiments, transmission only experiments and also transmission based on sensing results. The LOG-a-TEC web portal also uses the GRASS-RaPlaT tool in order to (i) provide the virtual experiment planning via simulation in order to ascertain the best setup before the actual execution in the testbed as well as (ii) support the postprocessing and visualization of experimentation results.
 
@@ -43,7 +43,7 @@ The wireless management network between nodes is based on a proprietary extensio
 
 For the purpose of communication between sensor network and the server located at JSI (infrastructure side) we developed a new protocol (see figure below), which was inspired by the HTTP protocol and is simple enough for fast implementation on VESNA nodes. The protocol defines two types of requests, **GET** and **POST**, which are understood by every VESNA node. **GET** requests are used for "safe" requests which do not change the state of the system and **POST** for "unsafe" requests which change the state of the system. The response from a node to these requests is considered to be in binary format and handled accordingly, although general responses are in text format and only the spectrum sensing data is in binary format. Every response ends with the sequence **OK\r\n** to indicate the end of the response.
 
-<img alt="Overview of a typical ALH request" src="img/Resource_access_protocol.png" />
+<center><img alt="Overview of a typical LCSP request" src="img/lcsp.png" style="width: 50%; height: 50%;" /></center>
 
 The protocol includes simple and efficient error handling mechanism. There are two types of errors defined. The first is **JUNK-INPUT**, which is the more common situation when the resource name is mistyped and the parser on the node does not recognize it. After this response the parser on the node expects five new lines, which resets the parser. Only after that the resource can be accessed again. The second type of error is **CORRUPTED-DATA**, used when cyclic redundancy check (CRC) check did not succeed thus we can conclude that the error happened somewhere on the line between the infrastructure and the gateway. The last situation will occur with very low probability.
 

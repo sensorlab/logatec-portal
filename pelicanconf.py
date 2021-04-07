@@ -23,6 +23,7 @@ THEME = 'theme/'
 THEME_STATIC_DIR = '.'
 
 STATIC_PATHS = ['img']
+STATIC_PATHS = ['pdf']
 
 # Take HTML filename from markdown filename instead of the page title.
 # e.g. content from foo.md is written to foo.html
