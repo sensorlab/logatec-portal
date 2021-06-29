@@ -3,17 +3,17 @@ title:
 <!-- vim: linebreak filetype=markdown expandtab ts=4 sw=4
 -->
 
-LOG-a-TEC covers a set of diverse testbeds used for research purposes. It initially started 7 years ago as an outdoor environmental sensing facility, it evolved towards [spectrum sensing and cognitive radio](ap-cradio.html) as its largest component. It is also covering application areas (verticals) such as [photovoltaics](ap-pv.html), [air quality](ap-aqa.html) and [automotive](ap-caravan.html). More recently, it is evolving towards a comprehensive heterogeneous [M2M/MTC/dense IoT setup](ap-mtc.html) comprising LR-WPAN and LPWAN technologies. The one thing all setups have in common is that they are based on a version of the [VESNA hardware platform](hw-vesna.html) which can be used as standalone or combined with other more powerful machines. VESNA is a modular and configurable embedded hardware platform developed by [SensorLab](http://sensorlab.ijs.si/hardware.html).
+LOG-a-TEC covers a set of diverse testbeds used for research purposes. It initially started 7 years ago as an outdoor environmental sensing facility, it evolved towards [spectrum sensing and cognitive radio](ap-cradio.html) as its largest component. It is also covering application areas (verticals) such as [photovoltaics](ap-pv.html), [air quality](ap-aqa.html) and [automotive](ap-caravan.html). More recently, it is evolving towards a comprehensive heterogeneous [M2M/MTC/dense IoT setup](ap-mtc.html) comprising LR-WPAN and LPWAN technologies. The one thing all setups have in common is that they are based on a version of the [VESNA hardware platform](hw-vesna.html) which can be used as standalone or combined with other more powerful machines. VESNA is a modular and configurable embedded hardware platform developed by SensorLab.
 
 <br/>
 
 To learn more about LOG-a-TEC, navigate the tabs of this site.
 
 To perform experiments, log in to the portal (you need to have an account).
-<a class="btn" href="https://crn.log-a-tec.eu/">Log me in &raquo;</a></p>
+<a class="btn" href="https://videk.ijs.si/">Log me in &raquo;</a></p>
 
-To find out more about us, you are welcome to visit our web site or fell free to contact us.
-<a class="btn" href="http://sensorlab.ijs.si/">I want to know more &raquo;</a></p>
+To find out more, fell free to contact us vie e-mail.
+<a class="btn" href="mailto:sensorlab@ijs.si">I want to know more &raquo;</a></p>
 
 
 The table below summarizes the major conceptual and technical evolution steps.

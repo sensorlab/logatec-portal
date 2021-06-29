@@ -118,7 +118,7 @@ K. Bregar and M. Mohorčič, "Improving Indoor Localization Using Convolutional 
 
 ## Authors and License
 Author of data set in this repository is Klemen Bregar, klemen.bregar@ijs.si.
-Copyright (C) 2020 SensorLab, Jožef Stefan Institute http://sensorlab.ijs.si
+Copyright (C) 2020 SensorLab, Jožef Stefan Institute, sensorlab@ijs.si.
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
 
