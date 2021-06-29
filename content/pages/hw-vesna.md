@@ -7,7 +7,7 @@ title: Cognitive Radio Hardware
 
 # VESNA
 
-[VESNA](http://sensorlab.ijs.si/hardware.html) is a modular and fully flexible platform for the development of wireless sensor networks developed at the SensorLab @ Jozef Stefan Institute. Based on the high-performance microcontroller with ARM Cortex-M3 core it is designed to meet the requirements of diverse applications.
+VESNA is a modular and fully flexible platform for the development of wireless sensor networks developed at the SensorLab @ Jozef Stefan Institute. Based on the high-performance microcontroller with ARM Cortex-M3 core and radio interface spanning over multiple ISM frequency bands it is designed to meet the requirements of diverse applications.
 
 In terms of modularity the platform consists of the VESNA core module (SNC) and a set of special feature modules (sensor node radio – SNR, sensor node expansion – SNE, sensor node power – SNP) that are used as/if needed.
 
@@ -16,9 +16,19 @@ In terms of modularity the platform consists of the VESNA core module (SNC) and 
     <figcaption>VESNA platform with possible extension boards.</figcaption>
 </figure>
 
-Various peripherals including UART, I2C, SPI, USB, ADC and DAC allow hosting of different sets of sensors and/or actuators. It contains 512 kB FlashROM, 64 kB RAM and an 2 GB SD card for code and data storage. It can be powered with a variety of energy supply options including battery, solar panel and external power supply.
+VESNA contains 512 kB FlashROM, 64 kB RAM and up to 2 GB SD card support for code and data storage. It can be powered with a variety of energy supply options including battery, solar panel and external power supply. Various peripherals including UART, I2C, SPI, USB, ADC and DAC allow hosting of different sets of sensors and/or actuators, for instance sensors for temperature, humidity, luminance, color, reflectance, pressure, presence, location, sound, acceleration, gasses, motion, range, and actuators such as motor, relay, servo, alarm, etc.
 
-<!-- TODO add more description? -->
+The platform readily supports:
+
+* communication standards IEEE 802.15.4, IEEE 802.15.1 and IEEE 802.11;
+* ZigBee, LoRa, 6LoWPAN, Bluetooth and Wireless M-Bus protocol stacks and technologies;
+* connection to the Internet via Wi-Fi, Ethernet or GSM/GPRS;
+* Arduino integrated development environment.
+
+Depending on the application requirements, it can be operated with fully [custom firmware](https://sensorlab.github.io/vesna-manual/) or with frameworks and APIs provided by the [Contiki-NG operating system](http://log-a-tec.eu/cr-software.html#contiki-ng-operating-system).
+
+Some additional information on VESNA platform can be found on our colleague's [blog](https://www.tablix.org/~avian/blog/archives/2011/12/vesna/).
+
 <br>
 
 ## SNE-ISMTV radios
