@@ -57,4 +57,4 @@ The demo is designed as a complete home power management system, and includes a 
 ## Related paper
 
 More details are available in the following scientific publication: 
-[Aleksandra Rashkovska, Jošt Novljan, Miha Smolnikar, Mihael Mohorčič, Carolina Fortuna; Online Short-term Forecasting of Photovoltaic Energy Production, 2015 IEEE PES Innovative Smart Grid Technologies Conference; 18-20 Feb. 2015; Washington DC, USA](http://sensorlab.ijs.si/files/publications/Rashkovska_Online_Photovoltaics_Generation_Forecast_ISGT.pdf).
+[Aleksandra Rashkovska, Jošt Novljan, Miha Smolnikar, Mihael Mohorčič, Carolina Fortuna; Online Short-term Forecasting of Photovoltaic Energy Production, 2015 IEEE PES Innovative Smart Grid Technologies Conference; 18-20 Feb. 2015; Washington DC, USA](pdf/Rashkovska_Online_Photovoltaics_Generation_Forecast_ISGT.pdf).
