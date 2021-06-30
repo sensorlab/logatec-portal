@@ -14,7 +14,7 @@ In addition to permanently mounted nodes, several kinds of mobile nodes or instr
 
 ## Hardware
 
-[VESNA](http://sensorlab.ijs.si/hardware.html) sensor node core (SNC) provides processing and storage at each sensor node. It contains an ARM Cortex M3 CPU at 64 MHz, 512 kB FlashROM, 64 kB RAM and an 2 GB SD card for code and data storage.
+[VESNA](http://log-a-tec.eu/hw-vesna.html) sensor node core (SNC) provides processing and storage at each sensor node. It contains an ARM Cortex M3 CPU at 64 MHz, 512 kB FlashROM, 64 kB RAM and an 2 GB SD card for code and data storage.
 
 Different sensor node clusters contain different combinations of the following embedded radio hardware:
 
