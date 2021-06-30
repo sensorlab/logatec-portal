@@ -115,7 +115,7 @@ The LOG-a-TEC testbed is a member of the Fed4FIRE federation of testbeds.
 
 The following material is available for LOG-a-TEC.
 
- * A MSc thesis describing the cogitive radio experimentation facilities in LOG-a-TEC: <a href="http://sensorlab.ijs.si/publication/32/distributed-spectrum-sensing-in-unlicensed-bands-using-the-vesna-platform">Zoltan Padrah: Distributed Spectrum Sensing in Unlicensed Bands Using the VESNA Platform, MSc thesis, MPS, Ljubljana, Slovenia.</a>
+ * A MSc thesis describing the cogitive radio experimentation facilities in LOG-a-TEC: [Zoltan Padrah: Distributed Spectrum Sensing in Unlicensed Bands Using the VESNA Platform, MSc thesis, MPS, Ljubljana, Slovenia](pdf/ZoltanPadrah_Magisterij_MPS2012_DistributedSpectrumSensinginUnlicensedBandsUsingVESNAPlatform.pdf).
 
  * [A short tutorial on how to use the LOG-a-TEC portal](doc/LOG-a-TEC_Portal_Tutorial.pdf).
 
