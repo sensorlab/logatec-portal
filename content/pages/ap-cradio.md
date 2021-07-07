@@ -115,21 +115,21 @@ The LOG-a-TEC testbed is a member of the Fed4FIRE federation of testbeds.
 
 The following material is available for LOG-a-TEC.
 
- * A MSc thesis describing the cogitive radio experimentation facilities in LOG-a-TEC: <a href="http://sensorlab.ijs.si/publication/32/distributed-spectrum-sensing-in-unlicensed-bands-using-the-vesna-platform">Zoltan Padrah: Distributed Spectrum Sensing in Unlicensed Bands Using the VESNA Platform, MSc thesis, MPS, Ljubljana, Slovenia.</a>
+ * A MSc thesis describing the cogitive radio experimentation facilities in LOG-a-TEC: [Zoltan Padrah: Distributed Spectrum Sensing in Unlicensed Bands Using the VESNA Platform, MSc thesis, MPS, Ljubljana, Slovenia](pdf/ZoltanPadrah_Magisterij_MPS2012_DistributedSpectrumSensinginUnlicensedBandsUsingVESNAPlatform.pdf).
 
  * [A short tutorial on how to use the LOG-a-TEC portal](doc/LOG-a-TEC_Portal_Tutorial.pdf).
 
  * [A description of the GRASS-RaPlaT tool for experiment planning and visualization of measurements](doc/GRASS-RaPlaT_for_experiment_planning_and_visualization_of_measurements.pdf).
 
- * A getting started tutorial that includes (1) an overview of the LOG-a-TEC testbed with its hardware and software components and (2) demos using the available Python tools is <a href="http://sensorlab.ijs.si/files/publications/Solc_Performing_cognitive_radio_experiments_on_the_LOG-a-TEC_sensor_network_testbed_2013.pdf">Tomaž Šolc: Performing cognitive radio experiments on the LOG-a-TEC sensor network testbed, CREW Training days, Brussels, Belgium., February 2013</a>, while the code can be downloaded from our <a href="https://github.com/sensorlab/vesna-alh-tools/tree/master/demos">GitHub page</a>.
+ * A getting started tutorial that includes (1) an overview of the LOG-a-TEC testbed with its hardware and software components and (2) demos using the available Python tools is [Tomaž Šolc: Performing cognitive radio experiments on the LOG-a-TEC sensor network testbed, CREW Training days, Brussels, Belgium., February 2013](pdf/Solc_Performing_cognitive_radio_experiments_on_the_LOG-a-TEC_sensor_network_testbed_2013.pdf), while the code can be downloaded from our <a href="https://github.com/sensorlab/vesna-alh-tools/tree/master/demos">GitHub page</a>.
 
- * A paper describing the adaptation and experimentation with the game theoretic based PAPU algorithm on LOG-a-TEC <a href="http://sensorlab.ijs.si/files/publications/Anton_Power_Allocation_Game_Logatec_2014_corrected.pdf">Ciprian Anton, Andrei Toma, Ligia Cremene, Mihael Mohorčič and Carolina Fortuna: Power Allocation Game for Interference Mitigation in a Real-world Experimental Testbed, IEEE ICC 2014 - Cognitive Radio and Networks Symposium.</a>.
+ * A paper describing the adaptation and experimentation with the game theoretic based PAPU algorithm on LOG-a-TEC [Ciprian Anton, Andrei Toma, Ligia Cremene, Mihael Mohorčič and Carolina Fortuna: Power Allocation Game for Interference Mitigation in a Real-world Experimental Testbed, IEEE ICC 2014 - Cognitive Radio and Networks Symposium](pdf/Anton_Power_Allocation_Game_Logatec_2014_corrected.pdf).
 
- * A general paper describing LOG-a-TEC <a href="http://sensorlab.ijs.si/files/publications/Mohorcic-WSN_Based_Experimental_Infrastucture-ISWCS2013.pdf">Mihael Mohorčič, Miha Smolnikar, Tomaž Javornik: Wireless Sensor Network Based Infrastructure for Experimentally Driven Research, The Tenth International Symposium on Wireless Communication Systems, Ilmenau, Germany, August 2013</a>.
+ * A general paper describing LOG-a-TEC [Mihael Mohorčič, Miha Smolnikar, Tomaž Javornik: Wireless Sensor Network Based Infrastructure for Experimentally Driven Research, The Tenth International Symposium on Wireless Communication Systems, Ilmenau, Germany, August 2013](pdf/Mohorcic-WSN_Based_Experimental_Infrastucture-ISWCS2013.pdf).
 
- * A paper benchmarking different sensing devices <a href="http://sensorlab.ijs.si/files/publications/FuNeMS-2012_final.pdf">Peter Van Wesemael, Wei Liu, Mikolaj Chwalisz, Justin Tallon, Danny Finn, Zoltan Padrah, Sophie Pollin, Stefan Bouckaert, Ingrid Moerman, and D. Willkomm: Robust distributed sensing with heterogeneous devices, Future Network & Mobile Summit 2012.</a>.
+ * A paper benchmarking different sensing devices [Peter Van Wesemael, Wei Liu, Mikolaj Chwalisz, Justin Tallon, Danny Finn, Zoltan Padrah, Sophie Pollin, Stefan Bouckaert, Ingrid Moerman, and D. Willkomm: Robust distributed sensing with heterogeneous devices, Future Network & Mobile Summit 2012](pdf/FuNeMS-2012_final.pdf).
 
- * A demonstration of SNE-ISMTV hardware capabilities <a href="http://sensorlab.ijs.si/files/publications/Solc-SNE-ISMTV_VESNA_wireless_sensor_node_expansion_for_cognitive_radio_experiments_a.pdf">Tomaž Šolc: SNE-ISMTV: VESNA wireless sensor node expansion for cognitive radio experiments, The Tenth International Symposium on Wireless Communication Systems, Ilmenau, Germany, August 2013</a>.
+ * A demonstration of SNE-ISMTV hardware capabilities [Tomaž Šolc: SNE-ISMTV: VESNA wireless sensor node expansion for cognitive radio experiments, The Tenth International Symposium on Wireless Communication Systems, Ilmenau, Germany, August 2013](pdf/Solc-SNE-ISMTV_VESNA_wireless_sensor_node_expansion_for_cognitive_radio_experiments_a.pdf).
 
 ### Code examples
 
@@ -146,5 +146,4 @@ Various experiments can be performed using the LOG-a-TEC infrastructure, for exa
 
 In order to access LOG-a-TEC you first need to get a user account. Please contact Matevz Vucnik, Tomaz Solc or Carolina Fortuna for this (firstname.lastname(at)ijs.si).
 
-Once you have a user account, [log in here](http://log-a-tec.eu/).
-<!-- TODO Log in where? -->
+Once you have a user account, [log in here](http://videk.ijs.si/).

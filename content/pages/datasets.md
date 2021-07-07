@@ -9,7 +9,7 @@ LPWAN Trace Sets produced by SensorLab are available on this page.
 
 ## License notice
 
-Copyright (C) 2019 SensorLab, Jožef Stefan Institute <a href="http://sensorlab.ijs.si">http://sensorlab.ijs.si</a>
+Copyright (C) 2019 SensorLab, Jožef Stefan Institute, sensorlab@ijs.si.
 
 All datasets listed below are licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)</a> license.
 

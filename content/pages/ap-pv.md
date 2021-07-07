@@ -19,7 +19,7 @@ The application allows monitoring of actual and predicted PV production by the p
 
 In collaboration with Telekom Slovenije, we used the VESNA platform as a baseline for the development and implementation of a sensor network for detailed real time monitoring of operating parameters in a photovoltaic system.
 
-The setup consists of four clusters of panels, as depicted in the figure below: two clusters having their panels oriented towards the south, one cluster having its panels oriented towards the east and the last cluster having its panels oriented towards the west. Between each cluster of panels and the corresponding power inverter, a <a href="http://sensorlab.ijs.si/hardware.html">VESNA sensor node</a> is installed and measures (i) the produced current [A] of one solar panel within cluster and (ii) the temperature of the PN junctions (modeled with the top and bottom solar panel temperature measurement) [°C].
+The setup consists of four clusters of panels, as depicted in the figure below: two clusters having their panels oriented towards the south, one cluster having its panels oriented towards the east and the last cluster having its panels oriented towards the west. Between each cluster of panels and the corresponding power inverter, a <a href="http://log-a-tec.eu/hw-vesna.html">VESNA sensor node</a> is installed and measures (i) the produced current [A] of one solar panel within cluster and (ii) the temperature of the PN junctions (modeled with the top and bottom solar panel temperature measurement) [°C].
 The communication between nodes is based on ZigBee at 868 MHz, while the backhaul connection to the remote server is implemented via the mobile network (3G). The measurements are performed every 2 minutes and then sent to a server. THe Sensor measurement data and associated metadata are collected in a database, and is accessible via a web user interface or directly via HTTP REST interface. 
 
 <img height="400" alt="" src="img/pv_diagram.png">
@@ -57,4 +57,4 @@ The demo is designed as a complete home power management system, and includes a 
 ## Related paper
 
 More details are available in the following scientific publication: 
-[Aleksandra Rashkovska, Jošt Novljan, Miha Smolnikar, Mihael Mohorčič, Carolina Fortuna; Online Short-term Forecasting of Photovoltaic Energy Production, 2015 IEEE PES Innovative Smart Grid Technologies Conference; 18-20 Feb. 2015; Washington DC, USA](http://sensorlab.ijs.si/files/publications/Rashkovska_Online_Photovoltaics_Generation_Forecast_ISGT.pdf).
+[Aleksandra Rashkovska, Jošt Novljan, Miha Smolnikar, Mihael Mohorčič, Carolina Fortuna; Online Short-term Forecasting of Photovoltaic Energy Production, 2015 IEEE PES Innovative Smart Grid Technologies Conference; 18-20 Feb. 2015; Washington DC, USA](pdf/Rashkovska_Online_Photovoltaics_Generation_Forecast_ISGT.pdf).
