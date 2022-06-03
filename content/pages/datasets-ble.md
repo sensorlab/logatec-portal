@@ -15,9 +15,12 @@ The dataset was collected with 25 [nodes](hw-lgtc.html) of the [LOG-a-TEC testbe
 
 ## Dataset
 
-Measurements are stored in *JSON* format where each object contains `rss` measurement (in $dBm$) with corresponding `timestamp` (in seconds).
+Measurements are stored in *JSON* format where each object contains `rss` measurement (in $dBm$) with corresponding `timestamp` (in seconds). The folder contains two JSON files:
 
-* Data set available for download: <a href="dataset-files/ble-fingerprint.zip">.zip, x GB</a>
+* spring.data.json - measurements made in May 2022.
+* winter.data.json - smaller measurements made in December 2021. This dataset contains only the measurements from the middle row of the campus park.
+
+Dataset available for download: <a href="dataset-files/ble-fingerprint.zip">.zip, 2.2 MB</a>
 
 
 ## License notice
