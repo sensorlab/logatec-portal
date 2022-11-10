@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = u''
 SITENAME = u'LOG-a-TEC by SensorLab'
-SITEURL = 'http://log-a-tec.eu'
+SITEURL = '//log-a-tec.eu'
 
 PATH = 'content'
 
@@ -22,8 +22,7 @@ MD_EXTENSIONS = { 'markdown.extensions.toc': {} }
 THEME = 'theme/'
 THEME_STATIC_DIR = '.'
 
-STATIC_PATHS = ['img']
-STATIC_PATHS = ['pdf']
+STATIC_PATHS = ['img', 'pdf']
 
 # Take HTML filename from markdown filename instead of the page title.
 # e.g. content from foo.md is written to foo.html
