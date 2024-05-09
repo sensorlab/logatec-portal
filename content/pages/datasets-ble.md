@@ -9,7 +9,7 @@ The dataset available on this page contains received signal strength (RSS) measu
 
 ## Measurement setup
 
-The dataset was collected with 25 [nodes](hw-lgtc.html) of the [LOG-a-TEC testbed](ap-cradio.html) positioned at the campus of the Jožef Stefan Institute, Ljubljana. The experimentation area is composed of $5\times{}26$ positions separated by $1.2~m$ covering $150$ square meters. On each position a mobile phone was broadcasting BLE advertising beacons with power of $-2~dBm$ in interval of $100~ms$. Surrounding testbed nodes were collecting the beacons for approximately a minute for each position.
+The dataset was collected with 25 [nodes](hw-lgtc.html) of the [LOG-a-TEC testbed](ap-cradio.html) positioned at the campus of the Jožef Stefan Institute, Ljubljana. The experimentation area is composed of 5 positions separated by 1.2m covering 150 square meters. On each position a mobile phone was broadcasting BLE advertising beacons with power of -2dBm in interval of 100ms. Surrounding testbed nodes were collecting the beacons for approximately a minute for each position.
 
 <img alt="Figure 1 - Experimentation area." src="img/ble-dataset-area.png" />
 
