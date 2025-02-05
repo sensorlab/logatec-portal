@@ -12,6 +12,7 @@ RUN : \
     && rm -rf /var/lib/apt/lists/* \
     && :
 
-USER $UNAME
+
+USER ${UID}:${GID}
 
 WORKDIR /src
